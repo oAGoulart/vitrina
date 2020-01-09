@@ -1,0 +1,27 @@
+{
+  "name": "jekyll-theme-vitrina",
+  "version": "0.1.0",
+  "description": "A general purpose Jekyll theme",
+  "main": "index.html",
+  "author": {
+    "name": "Augusto Goulart",
+    "email": "josegoulart.aluno@unipampa.edu.br",
+    "url": "https://joseaugustogoulart.me"
+  },
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "jekyll",
+    "theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/oAGoulart/vitrina.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oAGoulart/vitrina/issues"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.0"
+  }
+}

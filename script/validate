@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "pathname"
+require 'w3c_validators'
+
+def validate(file, ext)
+  puts "Validating #{file}..."
+
+  if ext == '.html'
+    results = W3CValidators::NuValidator.new.validate_file(file)
+  elsif ext == '.css'
+    results = W3CValidators::CSSValidator.new.validate_file(file)
+  end
+
+  return puts "#{file} is valid!" if results.errors.empty?
+
+  results.errors.each { |err| puts err.to_s }
+end
+
+Pathname.glob("../_site/**/*.{html,css}").each do |path|
+  next if file_name.directory?
+
+  validate path, File.extname(path)
+end

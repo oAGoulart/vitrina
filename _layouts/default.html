@@ -1,0 +1,32 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+
+    <header>
+      {% include header.html %}
+    </header>
+
+    <main>
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer>
+      {% include footer.html %}
+    </footer>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
