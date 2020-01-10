@@ -1,5 +1,4 @@
 _site
 .sass-cache
-yarn.lock
-Gemfile.lock
+*.lock
 *.gem
