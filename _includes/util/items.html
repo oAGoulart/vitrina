@@ -1,0 +1,34 @@
+{% if item.type == "buttons" %}
+  <div class="buttons">
+
+  {% for button in item.content %}
+    <a class="button {{ button.style }}" href="{{ button.link }}">
+
+    {% if button.icon %}
+      <span class="icon {{ button.icon.style }}">
+        <i class="fa {{ button.icon.name }}"></i>
+      </span>
+      <span>{{ button.content }}</span>
+
+    {% else %}
+      {{ button.content }}
+
+    {% endif %}
+
+    </a> {% comment %} button {% endcomment %}
+
+  {% endfor %}
+
+  </div> {% comment %} buttons {% endcomment %}
+
+{% elsif item.type == "link" %}
+  <a class="{{ item.style }}" href="{{ item.link }}">
+    {% include util/item_content.html %}
+  </a>
+
+{% elsif item.type == "text" %}
+  <p class="{{ item.style }}">
+    {{ item.content }}
+  </p>
+
+{% endif %}

@@ -1,0 +1,8 @@
+title: Vitrina
+description: A general purpose Jekyll theme.
+lang: en-US
+permalink: /:categories/:title
+
+# Don't change the configurations below
+include: [node_modules/fork-awesome/fonts]
+exclude: [yarn.lock, Gemfile.lock, jekyll-theme-vitrina.gemspec, Gemfile, vendor, scripts, node_modules/bulma, node_modules/fork-awesome/css, node_modules/fork-awesome/less, node_modules/fork-awesome/scss, node_modules/fork-awesome/CHANGELOG.md, node_modules/fork-awesome/CONTRIBUTORS.md, node_modules/fork-awesome/LICENSES, node_modules/fork-awesome/README.md, node_modules/fork-awesome/package.json]

@@ -1,0 +1,55 @@
+{% assign data = site.data.general.header %}
+
+<nav class="navbar {{ data.menu.style }}" role="navigation" aria-label="main navigation">
+
+{% if data.brand %}
+  <div id="navbarBrand" class="navbar-brand">
+    <a class="navbar-item" href="{{ data.brand.link }}">
+
+    {% if data.brand.image %}
+      <img src="{{ data.brand.image }}">
+    {% endif %}
+
+    </a> {% comment %} navbar-item {% endcomment %}
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBurger">
+
+    {% for i in (1..data.brand.burger.spans) %}
+      <span aria-hidden="true"></span>
+    {% endfor %}
+
+    </a> {% comment %} navbar-burger {% endcomment %}
+  </div> {% comment %} navbar-brand {% endcomment %}
+
+{% endif %}
+
+{% if data.menu %}
+  <div id="navbarMenu" class="navbar-menu">
+
+  {% if data.menu.start %}
+    <div class="navbar-start">
+
+    {% for item in data.menu.start %}
+      {% include util/navbar_items.html %}
+    {% endfor %}
+
+    </div> {% comment %} navbar-start {% endcomment %}
+
+  {% endif %}
+
+  {% if data.menu.end %}
+    <div class="navbar-end">
+      <div class="navbar-item">
+
+      {% for item in data.menu.end %}
+        {% include util/navbar_items.html %}
+      {% endfor %}
+
+    </div> {% comment %} navbar-end {% endcomment %}
+
+  {% endif %}
+
+  </div> {% comment %} navbar-menu {% endcomment %}
+{% endif %}
+
+</nav> {% comment %} navbar {% endcomment %}

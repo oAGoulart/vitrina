@@ -1,0 +1,79 @@
+{% assign data = site.data.general.home %}
+
+{% for part in data %}
+
+  {% if part.structure == "hero" %}
+    <section class="hero {{ part.style }}">
+      <div class="hero-body">
+        <div class="container">
+
+        {% for item in part.content %}
+          {% include util/items.html %}
+        {% endfor %}
+
+        </div> {% comment %} hero-body {% endcomment %}
+      </div> {% comment %} container {% endcomment %}
+    </section> {% comment %} hero {% endcomment %}
+
+  {% elsif part.structure == "level" %}
+    <nav class="level {{ part.style }}">
+
+    {% for item in part.content %}
+      <div class="level-item ">
+        <div>
+
+        {% for content in item.level %}
+          {% include util/items.html %}
+        {% endfor %}
+
+        </div>
+      </div> {% comment %} level-item {% endcomment %}
+
+    {% endfor %}
+
+    </nav> {% comment %} level {% endcomment %}
+
+  {% elsif part.structure == "section" %}
+    <section class="section {{ part.style }}">
+      <div class="container">
+
+      {% for item in part.content %}
+        {% include util/items.html %}
+      {% endfor %}
+
+      </div> {% comment %} container {% endcomment %}
+    </section> {% comment %} section {% endcomment %}
+
+  {% elsif part.structure == "grid" %}
+    <section class="section {{ part.style }}">
+      <div class="container">
+
+      {% for card in part.cards %}
+        <div class="card">
+
+        {% if card.image %}
+          <div class="card-image">
+            <figure class="image">
+              <img src="{{ card.image }}" alt="{{ card.title }}">
+            </figure>
+          </div>
+
+        {% endif %}
+
+          <div class="card-content">
+
+          {% for item in card.content %}
+            {% include util/items.html %}
+          {% endfor %}
+
+          </div> {% comment %} card-content {% endcomment %}
+        </div> {% comment %} card {% endcomment %}
+
+      {% endfor %}
+
+      </div> {% comment %} container {% endcomment %}
+    </section> {% comment %} section {% endcomment %}
+
+  {% endif %}
+
+{% endfor %}

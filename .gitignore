@@ -2,3 +2,5 @@ _site
 .sass-cache
 *.lock
 *.gem
+.bundle
+vendor/
