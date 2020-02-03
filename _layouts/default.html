@@ -2,8 +2,6 @@
 layout: compress
 ---
 
-{% include base_path %}
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
   <head>
@@ -12,21 +10,23 @@ layout: compress
 
   <body>
 
+  {% if site.data.general.header %}
     <header>
       {% include header.html %}
     </header>
 
+  {% endif %}
+
     <main>
-      <div class="container">
-        {{ content }}
-      </div>
+      {{ content }}
     </main>
 
-    <footer>
+  {% if site.data.general.footer %}
+    <footer class="footer">
       {% include footer.html %}
     </footer>
 
-    {% include scripts.html %}
+  {% endif %}
 
   </body>
 </html>

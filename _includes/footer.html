@@ -1,0 +1,16 @@
+{% assign data = site.data.general.footer %}
+
+<div class="columns">
+
+{% for column in data %}
+  <div class="column {{ column.style }}">
+
+  {% for item in column.content %}
+    {% include util/items.html %}
+  {% endfor %}
+
+  </div> {% comment %} column {% endcomment %}
+
+{% endfor %}
+
+</div> {% comment %} columns {% endcomment %}

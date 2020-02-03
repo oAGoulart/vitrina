@@ -1,0 +1,209 @@
+{
+  "header": {
+    "brand": {
+      "name": "Brand",
+      "image": "assets/img/logo.png",
+      "link": "/",
+      "burger": {
+        "spans": 3
+      }
+    },
+    "menu": {
+      "style": "is-primary is-transparent",
+      "start": [
+        {
+          "type": "buttons",
+          "content": [
+            {
+              "style": "is-light",
+              "content": "Donate",
+              "link": "/donate",
+              "icon": {
+                "name": "fa-money",
+                "style": "has-text-dark"
+              }
+            }
+          ]
+        }
+      ],
+      "end": [
+        {
+          "type": "link",
+          "content": "Blog",
+          "link": "/blog",
+          "style": "has-text-light"
+        },
+        {
+          "type": "link",
+          "content": "Projects",
+          "link": "/projects",
+          "style": "has-text-light"
+        },
+        {
+          "type": "link",
+          "content": "Papers",
+          "link": "/papers",
+          "style": "has-text-light"
+        },
+        {
+          "type": "dropdown",
+          "content": "More",
+          "links": [
+            {
+              "content": "Contact",
+              "link": "/contact",
+              "style": "has-text-light"
+            },
+            {
+              "content": "Resume",
+              "link": "/resume",
+              "style": "has-text-light"
+            }
+          ],
+          "style": "has-text-light"
+        }
+      ]
+    }
+  },
+  "footer": [
+    {
+      "style": "is-12",
+      "content": [
+        {
+          "type": "text",
+          "content": "This theme is intended for general purpose use."
+        },
+        {
+          "type": "link",
+          "content": "Privacy",
+          "link": "/privacy"
+        },
+        {
+          "type": "link",
+          "content": "Disclaimer",
+          "link": "/disclaimer"
+        }
+      ]
+    }
+  ],
+  "home": [
+    {
+      "structure": "hero",
+      "content": [
+        {
+          "type": "text",
+          "content": "Vitrina"
+        },
+        {
+          "type": "text",
+          "content": "A general purpose Jekyll theme."
+        }
+      ]
+    },
+    {
+      "structure": "level",
+      "style": "is-mobile",
+      "content": [
+        {
+          "level": [
+            {
+              "type": "text",
+              "content": "Tweets"
+            },
+            {
+              "type": "text",
+              "content": "3,506"
+            },
+          ]
+        },
+        {
+          "level": [
+            {
+              "type": "text",
+              "content": "Following"
+            },
+            {
+              "type": "text",
+              "content": "69"
+            },
+          ]
+        }
+      ]
+    },
+    {
+      "structure": "section",
+      "content": [
+        {
+          "type": "text",
+          "content": "This theme is intended for general purpose use."
+        },
+        {
+          "type": "buttons",
+          "content": [
+            {
+              "style": "is-primary",
+              "content": "Contact me",
+              "link": "/contact"
+            },
+            {
+              "style": "is-primary",
+              "content": "See my resume",
+              "link": "/resume"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "structure": "grid",
+      "cards": [
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "This theme is intended for general purpose use."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "This theme is intended for general purpose use."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": {
+    "date": "show",
+    "author": "show",
+    "tags": "show",
+    "banner": "show"
+  }
+}

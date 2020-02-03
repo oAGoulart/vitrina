@@ -1,0 +1,10 @@
+{% if item.icon %}
+  <span class="icon {{ item.icon.style }}">
+    <i class="fa {{ item.icon.name }}"></i>
+  </span>
+  <span>{{ item.content }}</span>
+
+{% else %}
+  {{ item.content }}
+
+{% endif %}

@@ -1,0 +1,61 @@
+{% if item.type == "buttons" %}
+  <div class="navbar-item">
+    <div class="buttons">
+
+    {% for button in item.content %}
+      <a class="button {{ button.style }}" href="{{ button.link }}">
+
+      {% if button.icon %}
+        <span class="icon {{ button.icon.style }}">
+          <i class="fa {{ button.icon.name }}"></i>
+        </span>
+        <span>{{ button.content }}</span>
+
+      {% else %}
+        {{ button.content }}
+
+      {% endif %}
+
+      </a> {% comment %} button {% endcomment %}
+
+    {% endfor %}
+
+    </div> {% comment %} buttons {% endcomment %}
+  </div> {% comment %} navbar-item {% endcomment %}
+
+{% elsif item.type == "link" %}
+  <a class="navbar-item {{ item.style }}" href="{{ item.link }}">
+    {% include util/item_content.html %}
+  </a>
+
+{% elsif item.type == "text" %}
+  <div class="navbar-item {{ item.style }}">
+    {{ item.content }}
+  </div>
+
+{% elsif item.type == "dropdown" %}
+  <div class="navbar-item has-dropdown is-hoverable">
+    <a class="navbar-link {{ item.style }}">
+      {% include util/item_content.html %}
+    </a>
+
+    <div class="navbar-dropdown">
+
+    {% for link in item.links %}
+
+      {% if link.divider %}
+        <hr class="navbar-divider">
+
+      {% else %}
+        <a class="navbar-item" href="{{ item.link }}">
+          {% include util/item_content.html %}
+        </a>
+
+      {% endif %}
+
+    {% endfor %}
+
+    </div> {% comment %} navbar-dropdown {% endcomment %}
+  </div> {% comment %} navbar-item {% endcomment %}
+
+{% endif %}
