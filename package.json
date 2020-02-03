@@ -21,7 +21,13 @@
   "bugs": {
     "url": "https://github.com/oAGoulart/vitrina/issues"
   },
-  "devDependencies": {
-    "bulma": "^0.8.0"
+  "scripts": {
+    "build": "./scripts/installing",
+    "lint": "ruby ./scripts/validate",
+    "run": "bundle exec jekyll serve"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0",
+    "fork-awesome": "^1.1.7"
   }
 }
