@@ -1,5 +1,5 @@
 {% if item.type == "buttons" %}
-  <div class="buttons">
+  <div class="buttons {{ item.style }}">
 
   {% for button in item.content %}
     <a class="button {{ button.style }}" href="{{ button.link }}">
@@ -8,13 +8,10 @@
       <span class="icon {{ button.icon.style }}">
         <i class="fa {{ button.icon.name }}"></i>
       </span>
-      <span>{{ button.content }}</span>
-
-    {% else %}
-      {{ button.content }}
 
     {% endif %}
 
+      <span>{{ button.content | newline_to_br }}</span>
     </a> {% comment %} button {% endcomment %}
 
   {% endfor %}
@@ -26,9 +23,30 @@
     {% include util/item_content.html %}
   </a>
 
+{% elsif item.type == "image" %}
+  {% if item.link %}
+    <a href="{{ item.link }}">
+      <img class="{{ item.style }}" src="{{ item.file }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
+    </a>
+
+  {% else %}
+
+  {% endif %}
+
 {% elsif item.type == "text" %}
   <p class="{{ item.style }}">
-    {{ item.content }}
+    {% include util/item_content.html %}
   </p>
+
+{% elsif item.type == "icons" %}
+  <span class="icon {{ item.style }}">
+    <span class="fa-stack">
+
+    {% for icon in item.content %}
+      <i class="fa {{ icon.name }} {{ icon.style }}"></i>
+    {% endfor %}
+
+    </span> {% comment %} span {% endcomment %}
+  </span> {% comment %} span {% endcomment %}
 
 {% endif %}
