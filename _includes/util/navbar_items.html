@@ -9,13 +9,10 @@
         <span class="icon {{ button.icon.style }}">
           <i class="fa {{ button.icon.name }}"></i>
         </span>
-        <span>{{ button.content }}</span>
-
-      {% else %}
-        {{ button.content }}
 
       {% endif %}
 
+        <span>{{ button.content | newline_to_br }}</span>
       </a> {% comment %} button {% endcomment %}
 
     {% endfor %}
@@ -30,7 +27,7 @@
 
 {% elsif item.type == "text" %}
   <div class="navbar-item {{ item.style }}">
-    {{ item.content }}
+    {% include util/item_content.html %}
   </div>
 
 {% elsif item.type == "dropdown" %}
@@ -47,8 +44,16 @@
         <hr class="navbar-divider">
 
       {% else %}
-        <a class="navbar-item" href="{{ item.link }}">
-          {% include util/item_content.html %}
+        <a class="navbar-item" href="{{ link.reference }}">
+
+          {% if link.icon %}
+            <span class="icon {{ link.icon.style }}">
+              <i class="fa {{ link.icon.name }}"></i>
+            </span>
+
+          {% endif %}
+
+          <span>{{ link.content | newline_to_br }}</span>
         </a>
 
       {% endif %}

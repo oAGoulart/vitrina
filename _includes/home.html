@@ -3,7 +3,16 @@
 {% for part in data %}
 
   {% if part.structure == "hero" %}
-    <section class="hero {{ part.style }}">
+
+    {% if part.background %}
+    <section class="hero is-fullheight is-primary has-background {{ part.style }}">
+      <img class="hero-background" src="{{ part.background }}">
+
+    {% else %}
+    <section class="hero is-fullheight is-light {{ part.style }}">
+
+    {% endif %}
+
       <div class="hero-body">
         <div class="container">
 
@@ -16,26 +25,32 @@
     </section> {% comment %} hero {% endcomment %}
 
   {% elsif part.structure == "level" %}
-    <nav class="level {{ part.style }}">
+    <section class="section">
+      <nav class="level {{ part.style }}">
 
-    {% for item in part.content %}
-      <div class="level-item ">
-        <div>
+      {% for level in part.content %}
+        <div class="level-item {{ level.style }}">
+          <div>
 
-        {% for content in item.level %}
-          {% include util/items.html %}
-        {% endfor %}
+          {% for item in level.items %}
+            {% include util/items.html %}
+          {% endfor %}
 
-        </div>
-      </div> {% comment %} level-item {% endcomment %}
+          </div>
+        </div> {% comment %} level-item {% endcomment %}
 
-    {% endfor %}
+      {% endfor %}
 
-    </nav> {% comment %} level {% endcomment %}
+      </nav> {% comment %} level {% endcomment %}
+    </section> {% comment %} section {% endcomment %}
 
   {% elsif part.structure == "section" %}
     <section class="section {{ part.style }}">
       <div class="container">
+
+      {% if part.title %}
+        <h1 class="title">{{ part.title }}</h1>
+      {% endif %}
 
       {% for item in part.content %}
         {% include util/items.html %}
@@ -45,33 +60,19 @@
     </section> {% comment %} section {% endcomment %}
 
   {% elsif part.structure == "grid" %}
-    <section class="section {{ part.style }}">
+    <section class="section grid{{ part.style }}">
+
+    {% if part.title %}
+      <div class="container content">
+        <h1 class="title">{{ part.title }}</h1>
+      </div>
+
+    {% endif %}
+
       <div class="container">
+        {% include util/grid_columns.html %}
+      </div>
 
-      {% for card in part.cards %}
-        <div class="card">
-
-        {% if card.image %}
-          <div class="card-image">
-            <figure class="image">
-              <img src="{{ card.image }}" alt="{{ card.title }}">
-            </figure>
-          </div>
-
-        {% endif %}
-
-          <div class="card-content">
-
-          {% for item in card.content %}
-            {% include util/items.html %}
-          {% endfor %}
-
-          </div> {% comment %} card-content {% endcomment %}
-        </div> {% comment %} card {% endcomment %}
-
-      {% endfor %}
-
-      </div> {% comment %} container {% endcomment %}
     </section> {% comment %} section {% endcomment %}
 
   {% endif %}

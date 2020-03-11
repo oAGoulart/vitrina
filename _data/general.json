@@ -3,10 +3,7 @@
     "brand": {
       "name": "Brand",
       "image": "assets/img/logo.png",
-      "link": "/",
-      "burger": {
-        "spans": 3
-      }
+      "link": "/"
     },
     "menu": {
       "style": "is-primary is-transparent",
@@ -15,12 +12,12 @@
           "type": "buttons",
           "content": [
             {
-              "style": "is-light",
+              "style": "is-info",
               "content": "Donate",
               "link": "/donate",
               "icon": {
-                "name": "fa-money",
-                "style": "has-text-dark"
+                "style": "has-text-success",
+                "name": "fa-money"
               }
             }
           ]
@@ -28,51 +25,90 @@
       ],
       "end": [
         {
+          "style": "has-text-light",
           "type": "link",
           "content": "Blog",
           "link": "/blog",
-          "style": "has-text-light"
+          "icon": {
+            "style": "has-text-info",
+            "name": "fa-feed"
+          }
         },
         {
+          "style": "has-text-light",
           "type": "link",
           "content": "Projects",
           "link": "/projects",
-          "style": "has-text-light"
+          "icon": {
+            "style": "has-text-info",
+            "name": "fa-gear"
+          }
         },
         {
+          "style": "has-text-light",
           "type": "link",
           "content": "Papers",
           "link": "/papers",
-          "style": "has-text-light"
+          "icon": {
+            "style": "has-text-info",
+            "name": "fa-flask"
+          }
         },
         {
+          "style": "has-text-light",
           "type": "dropdown",
           "content": "More",
           "links": [
             {
+              "style": "has-text-light",
               "content": "Contact",
-              "link": "/contact",
-              "style": "has-text-light"
+              "reference": "/contact",
+              "icon": {
+                "style": "has-text-primary",
+                "name": "fa-envelope"
+              }
             },
             {
+              "style": "has-text-light",
               "content": "Resume",
-              "link": "/resume",
-              "style": "has-text-light"
+              "reference": "/resume",
+              "icon": {
+                "style": "has-text-primary",
+                "name": "fa-briefcase"
+              }
             }
-          ],
-          "style": "has-text-light"
+          ]
         }
       ]
     }
   },
   "footer": [
     {
-      "style": "is-12",
+      "style": "is-3",
       "content": [
         {
-          "type": "text",
-          "content": "This theme is intended for general purpose use."
+          "style": "is-large",
+          "type": "icons",
+          "content": [
+            {
+              "style": "fa-stack-2x",
+              "name": "fa-creative-commons"
+            }
+          ]
         },
+        {
+          "type": "text",
+          "content": "Except where otherwise noted, content on this site is licensed under a Creative Commons Attribution 4.0 International license."
+        }
+      ]
+    },
+    {
+      "style": "is-6",
+      "content": []
+    },
+    {
+      "style": "is-3 has-text-right",
+      "content": [
         {
           "type": "link",
           "content": "Privacy",
@@ -82,6 +118,14 @@
           "type": "link",
           "content": "Disclaimer",
           "link": "/disclaimer"
+        },
+        {
+          "type": "image",
+          "name": "Made with Bulma",
+          "link": "https://bulma.io",
+          "file": "assets/img/made-with-bulma.png",
+          "width": "128",
+          "height": "24"
         }
       ]
     }
@@ -89,40 +133,93 @@
   "home": [
     {
       "structure": "hero",
+      "background": "assets/img/card.png",
       "content": [
         {
+          "style": "title is-size-1 is-uppercase has-text-centered",
           "type": "text",
-          "content": "Vitrina"
+          "content": "You won't regret it!"
         },
         {
+          "style": "subtitle is-size-4 has-text-centered",
           "type": "text",
-          "content": "A general purpose Jekyll theme."
+          "content": "Scroll down this page to explore more about Vitrina."
         }
       ]
     },
     {
+      "style": "is-mobile has-text-centered",
       "structure": "level",
-      "style": "is-mobile",
       "content": [
         {
-          "level": [
+          "items": [
             {
-              "type": "text",
-              "content": "Tweets"
+              "style": "is-large",
+              "type": "icons",
+              "content": [
+                {
+                  "style": "fa-stack-2x",
+                  "name": "fa-group"
+                }
+              ]
             },
             {
+              "style": "heading",
               "type": "text",
-              "content": "3,506"
+              "content": "Clients"
+            },
+            {
+              "style": "title",
+              "type": "text",
+              "content": "1,312"
             },
           ]
         },
         {
-          "level": [
+          "items": [
             {
-              "type": "text",
-              "content": "Following"
+              "style": "is-large",
+              "type": "icons",
+              "content": [
+                {
+                  "style": "fa-stack-2x",
+                  "name": "fa-folder"
+                }
+              ]
             },
             {
+              "style": "heading",
+              "type": "text",
+              "content": "Projects"
+            },
+            {
+
+              "style": "title",
+              "type": "text",
+              "content": "420"
+            },
+          ]
+        },
+        {
+          "items": [
+            {
+              "style": "is-large",
+              "type": "icons",
+              "content": [
+                {
+                  "style": "fa-stack-2x",
+                  "name": "fa-university"
+                }
+              ]
+            },
+            {
+              "style": "heading",
+              "type": "text",
+              "content": "Partners"
+            },
+            {
+
+              "style": "title",
               "type": "text",
               "content": "69"
             },
@@ -132,12 +229,14 @@
     },
     {
       "structure": "section",
+      "title": "About",
       "content": [
         {
           "type": "text",
-          "content": "This theme is intended for general purpose use."
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed. Donec rhoncus urna nec finibus fringilla. Fusce leo nisl, aliquam quis ultricies non, maximus ultricies ligula. Mauris consectetur convallis erat, dapibus blandit erat tristique eu. Donec in turpis facilisis, maximus diam sed, malesuada quam. Donec mattis dapibus augue sed placerat. Quisque eu ullamcorper urna. Sed sed erat nulla."
         },
         {
+          "style": "is-centered are-medium",
           "type": "buttons",
           "content": [
             {
@@ -156,6 +255,7 @@
     },
     {
       "structure": "grid",
+      "title": "Featured",
       "cards": [
         {
           "title": "Pellentesque vitae ligula sem.",
@@ -163,13 +263,13 @@
           "content": [
             {
               "type": "text",
-              "content": "This theme is intended for general purpose use."
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "type": "buttons",
               "content": [
                 {
-                  "style": "is-primary",
+                  "style": "is-primary is-outlined",
                   "content": "See more",
                   "link": "/"
                 }
@@ -183,13 +283,133 @@
           "content": [
             {
               "type": "text",
-              "content": "This theme is intended for general purpose use."
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
             },
             {
               "type": "buttons",
               "content": [
                 {
-                  "style": "is-primary",
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed. Donec rhoncus urna nec finibus fringilla. Fusce leo nisl, aliquam quis ultricies non, maximus ultricies ligula. Mauris consectetur convallis erat, dapibus blandit erat tristique eu. Donec in turpis facilisis, maximus diam sed, malesuada quam. Donec mattis dapibus augue sed placerat. Quisque eu ullamcorper urna. Sed sed erat nulla."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed. Donec rhoncus urna nec finibus fringilla. Fusce leo nisl, aliquam quis ultricies non, maximus ultricies ligula. Mauris consectetur convallis erat, dapibus blandit erat tristique eu. Donec in turpis facilisis, maximus diam sed, malesuada quam. Donec mattis dapibus augue sed placerat. Quisque eu ullamcorper urna. Sed sed erat nulla."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
+                  "content": "See more",
+                  "link": "/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Pellentesque vitae ligula sem.",
+          "image": "assets/img/card.png",
+          "content": [
+            {
+              "type": "text",
+              "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
+            },
+            {
+              "type": "buttons",
+              "content": [
+                {
+                  "style": "is-primary is-outlined",
                   "content": "See more",
                   "link": "/"
                 }
@@ -199,11 +419,5 @@
         }
       ]
     }
-  ],
-  "posts": {
-    "date": "show",
-    "author": "show",
-    "tags": "show",
-    "banner": "show"
-  }
+  ]
 }

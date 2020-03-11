@@ -2,9 +2,7 @@
   <span class="icon {{ item.icon.style }}">
     <i class="fa {{ item.icon.name }}"></i>
   </span>
-  <span>{{ item.content }}</span>
-
-{% else %}
-  {{ item.content }}
 
 {% endif %}
+
+<span>{{ item.content | newline_to_br }}</span>

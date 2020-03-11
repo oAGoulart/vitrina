@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+// Colors
+$black: rgb(0, 0, 0);
+$grey: rgb(200, 200, 200);
+$white: rgb(255, 255, 255);
+$yellow: rgb(255, 225, 0);
+
+// Bulma's variables
+$family-sans-serif: 'Josefin Sans', sans-serif;
+$primary: $black;
+$primary-invert: $yellow;
+$primary-light: $white;
+$primary-dark: $grey;
+$info: $yellow;
+$info-invert: $black;
+$primary-light: $white;
+$primary-dark: $grey;
+$link: $black;
+$link-invert: $yellow;
+$link-hover: $grey;
+$border-hover: $yellow;

@@ -3,5 +3,12 @@
 
 @charset "utf-8";
 
+// Style configuration
+@import "customize.scss";
+
+// Third-party
 @import "_bulma.scss";
 @import "_fork_awesome.scss";
+
+// General styles
+@import "elements.scss";

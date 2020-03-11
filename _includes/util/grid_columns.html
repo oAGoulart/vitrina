@@ -1,0 +1,47 @@
+{% comment %}
+  This requires an array with all cards named part.cards
+{% endcomment %}
+
+{% assign grid_width = 4 %}
+{% assign grid_height = part.cards.size | divided_by: grid_width %}
+
+<div class="columns">
+
+{% for i in (1..grid_width) %}
+  <div class="column is-3">
+
+  {% for n in (0..grid_height) %}
+    {% assign index = grid_width | times: n | plus: i | minus: 1 %}
+    {% assign card = part.cards[index] %}
+
+    {% if card == nil %}
+      {% continue %}
+    {% endif %}
+
+    <div class="card">
+
+    {% if card.image %}
+      <div class="card-image">
+        <figure class="image">
+          <img src="{{ card.image }}" alt="{{ card.title }}">
+        </figure>
+      </div>
+
+    {% endif %}
+
+      <div class="card-content">
+
+      {% for item in card.content %}
+        {% include util/items.html %}
+      {% endfor %}
+
+      </div> {% comment %} card-content {% endcomment %}
+    </div> {% comment %} card {% endcomment %}
+
+  {% endfor %}
+
+  </div> {% comment %} container {% endcomment %}
+
+{% endfor %}
+
+</div> {% comment %} columns {% endcomment %}
