@@ -22,9 +22,9 @@
     "url": "https://github.com/oAGoulart/vitrina/issues"
   },
   "scripts": {
-    "build": "./scripts/installing",
+    "install": "./scripts/installing",
     "lint": "ruby ./scripts/validate",
-    "run": "bundle exec jekyll serve"
+    "build": "bundle exec jekyll serve"
   },
   "dependencies": {
     "bulma": "^0.8.0",
