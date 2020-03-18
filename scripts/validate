@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "pathname"
+require 'rubygems'
+require 'pathname'
 require 'w3c_validators'
 
 def validate(file, ext)
@@ -18,8 +19,8 @@ def validate(file, ext)
   results.errors.each { |err| puts err.to_s }
 end
 
-Pathname.glob("../_site/**/*.{html,css}").each do |path|
-  next if file_name.directory?
+Pathname.glob("../{.,_includes,_layouts,_assets}/*.{html,css}").each do |path|
+  next if path.directory?
 
   validate path, File.extname(path)
 end
