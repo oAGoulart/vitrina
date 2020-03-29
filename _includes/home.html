@@ -6,7 +6,7 @@
 
     {% if part.background %}
     <section class="hero is-fullheight is-primary has-background {{ part.style }}">
-      <img class="hero-background" src="{{ part.background }}">
+      <img class="hero-background" src="{{ site.url }}{{ part.background }}">
 
     {% else %}
     <section class="hero is-fullheight is-light {{ part.style }}">

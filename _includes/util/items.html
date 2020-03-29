@@ -2,7 +2,7 @@
   <div class="buttons {{ item.style }}">
 
   {% for button in item.content %}
-    <a class="button {{ button.style }}" href="{{ button.link }}">
+    <a class="button {{ button.style }}" href="{{ site.url }}{{ button.link }}">
 
     {% if button.icon %}
       <span class="icon {{ button.icon.style }}">
@@ -19,14 +19,14 @@
   </div> {% comment %} buttons {% endcomment %}
 
 {% elsif item.type == "link" %}
-  <a class="{{ item.style }}" href="{{ item.link }}">
+  <a class="{{ item.style }}" href="{{ site.url }}{{ item.link }}">
     {% include util/item_content.html %}
   </a>
 
 {% elsif item.type == "image" %}
   {% if item.link %}
-    <a href="{{ item.link }}">
-      <img class="{{ item.style }}" src="{{ item.file }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
+    <a href="{{ site.url }}{{ item.link }}">
+      <img class="{{ item.style }}" src="{{ site.url }}{{ item.file }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
     </a>
 
   {% else %}

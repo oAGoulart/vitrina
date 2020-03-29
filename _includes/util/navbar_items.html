@@ -3,7 +3,7 @@
     <div class="buttons">
 
     {% for button in item.content %}
-      <a class="button {{ button.style }}" href="{{ button.link }}">
+      <a class="button {{ button.style }}" href="{{ site.url }}{{ button.link }}">
 
       {% if button.icon %}
         <span class="icon {{ button.icon.style }}">
@@ -21,7 +21,7 @@
   </div> {% comment %} navbar-item {% endcomment %}
 
 {% elsif item.type == "link" %}
-  <a class="navbar-item {{ item.style }}" href="{{ item.link }}">
+  <a class="navbar-item {{ item.style }}" href="{{ site.url }}{{ item.link }}">
     {% include util/item_content.html %}
   </a>
 
