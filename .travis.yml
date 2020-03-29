@@ -3,9 +3,6 @@ before_script:
   - bundle install
   - gem install percy-cli
 script:
-  - bundle exec jekyll build
-#  - bundle exec htmlproofer ./_site --check-html --check-sri
-  - bundle exec rubocop -D --cache false
-  - ruby ./scripts/validate.ruby
-  - gem build vitrina.gemspec
+  - sudo chmod +x ./scripts/build.sh
+  - ./scripts/build.sh
   - percy snapshot _site/
