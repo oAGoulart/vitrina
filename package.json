@@ -1,7 +1,7 @@
 {
-  "name": "jekyll-theme-vitrina",
+  "name": "vitrina",
   "version": "0.1.0",
-  "description": "A general purpose Jekyll theme",
+  "description": "A general purpose, configurable, Jekyll theme",
   "main": "index.html",
   "author": {
     "name": "Augusto Goulart",
@@ -9,7 +9,6 @@
     "url": "https://joseaugustogoulart.me"
   },
   "license": "MIT",
-  "private": true,
   "keywords": [
     "jekyll",
     "theme"
