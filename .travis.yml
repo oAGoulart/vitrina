@@ -1,7 +1,11 @@
 language: ruby
 before_script:
-  - ./scripts/installing
+  - bundle install
   - gem install percy-cli
 script:
-  - ./scripts/build
+  - bundle exec jekyll build
+#  - bundle exec htmlproofer ./_site --check-html --check-sri
+  - bundle exec rubocop -D --cache false
+  - ruby ./scripts/validate.ruby
+  - gem build vitrina.gemspec
   - percy snapshot _site/

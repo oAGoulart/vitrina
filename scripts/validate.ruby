@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # frozen_string_literal: true
 
 require 'rubygems'
@@ -21,7 +20,7 @@ def validate(file, ext)
 end
 
 # For every Jekyll directory with source files
-Pathname.glob("../{.,_includes,_layouts,_assets}/*.{html,css}").each do |path|
+Pathname.glob('../{.,_includes,_layouts,_assets}/*.{html,css}').each do |path|
   next if path.directory?
 
   validate path, File.extname(path)
