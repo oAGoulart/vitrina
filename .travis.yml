@@ -1,0 +1,7 @@
+language: ruby
+before_script:
+  - ./scripts/installing
+  - gem install percy-cli
+script:
+  - ./scripts/build
+  - percy snapshot _site/
