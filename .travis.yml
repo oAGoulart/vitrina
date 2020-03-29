@@ -4,5 +4,5 @@ before_script:
   - gem install percy-cli
 script:
   - sudo chmod +x ./scripts/build
-  - ./scripts/build
+  - ./scripts/build.sh
   - percy snapshot _site/
