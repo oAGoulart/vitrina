@@ -6,6 +6,6 @@ script:
   - bundle exec jekyll build
   - bundle exec htmlproofer ./_site --check-html --check-sri
   - bundle exec rubocop -D
-  - ruby ./script/validate
+  - ruby ./scripts/validate
   - gem build vitrina.gemspec
   - percy snapshot _site/
