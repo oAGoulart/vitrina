@@ -1,9 +1,7 @@
-#!/bin/sh
-
-set -e
+#!/usr/bin/env bash
 
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --check-html --check-sri
 bundle exec rubocop -D
-bundle exec script/validate
-gem build jekyll-theme-vitrina.gemspec
+./script/validate
+gem build vitrina.gemspec
