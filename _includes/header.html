@@ -5,10 +5,10 @@
 
 {% if data.brand %}
   <div id="navbarBrand" class="navbar-brand">
-    <a class="navbar-item" href="{{ data.brand.link }}">
+    <a class="navbar-item" href="{{ site.url }}{{ data.brand.link }}">
 
     {% if data.brand.image %}
-      <img src="{{ data.brand.image }}">
+      <img src="{{ site.url }}{{ data.brand.image }}">
     {% endif %}
 
     </a> {% comment %} navbar-item {% endcomment %}
