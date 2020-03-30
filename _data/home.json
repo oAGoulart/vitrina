@@ -1,6 +1,7 @@
 [
   {
     "structure": "hero",
+    "name": "Vitrina",
     "background": "assets/img/card.png",
     "content": [
       {
@@ -51,19 +52,19 @@
             "content": [
               {
                 "style": "fa-stack-2x",
-                "name": "fa-university"
+                "name": "fa-briefcase"
               }
             ]
           },
           {
             "style": "heading",
             "type": "text",
-            "content": "Partners"
+            "content": "Clients"
           },
           {
             "style": "title",
             "type": "text",
-            "content": "69"
+            "content": "420"
           },
         ]
       },
@@ -75,19 +76,19 @@
             "content": [
               {
                 "style": "fa-stack-2x",
-                "name": "fa-university"
+                "name": "fa-gear"
               }
             ]
           },
           {
             "style": "heading",
             "type": "text",
-            "content": "Partners"
+            "content": "Projects"
           },
           {
             "style": "title",
             "type": "text",
-            "content": "69"
+            "content": "1312"
           },
         ]
       }
@@ -108,12 +109,12 @@
           {
             "style": "is-primary",
             "content": "Contact me",
-            "link": "/contact"
+            "link": "contact"
           },
           {
             "style": "is-primary",
             "content": "See my resume",
-            "link": "/resume"
+            "link": "resume"
           }
         ]
       }
@@ -137,7 +138,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -157,7 +158,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -177,7 +178,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -197,7 +198,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -217,7 +218,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -237,7 +238,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -257,7 +258,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }
@@ -277,7 +278,7 @@
               {
                 "style": "is-primary is-outlined",
                 "content": "See more",
-                "link": "/"
+                "link": ""
               }
             ]
           }

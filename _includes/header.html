@@ -5,10 +5,15 @@
 
 {% if data.brand %}
   <div id="navbarBrand" class="navbar-brand">
-    <a class="navbar-item" href="{{ site.url }}{{ data.brand.link }}">
+    {% assign link = data.brand.link %}
+    {% include util/prepend_link.html %}
+    <a class="navbar-item" href="{{ link }}">
 
     {% if data.brand.image %}
-      <img src="{{ site.url }}{{ data.brand.image }}">
+      {% assign link = data.brand.image %}
+      {% include util/prepend_link.html %}
+      <img src="{{ link }}" alt="{{ data.brand.name }}">
+
     {% endif %}
 
     </a> {% comment %} navbar-item {% endcomment %}

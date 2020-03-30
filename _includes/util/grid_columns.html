@@ -23,7 +23,9 @@
     {% if card.image %}
       <div class="card-image">
         <figure class="image">
-          <img src="{{ site.url }}{{ card.image }}" alt="{{ card.title }}">
+          {% assign link = card.image %}
+          {% include util/prepend_link.html %}
+          <img src="{{ link }}" alt="{{ card.title }}">
         </figure>
       </div>
 

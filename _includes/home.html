@@ -6,7 +6,9 @@
 
     {% if part.background %}
     <section class="hero is-fullheight is-primary has-background {{ part.style }}">
-      <img class="hero-background" src="{{ site.url }}{{ part.background }}">
+      {% assign link = part.background %}
+      {% include util/prepend_link.html %}
+      <img class="hero-background" src="{{ link }}" alt="{{ part.name }}">
 
     {% else %}
     <section class="hero is-fullheight is-light {{ part.style }}">

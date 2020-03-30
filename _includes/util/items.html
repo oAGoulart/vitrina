@@ -2,7 +2,9 @@
   <div class="buttons {{ item.style }}">
 
   {% for button in item.content %}
-    <a class="button {{ button.style }}" href="{{ site.url }}{{ button.link }}">
+    {% assign link = button.link %}
+    {% include util/prepend_link.html %}
+    <a class="button {{ button.style }}" href="{{ link }}">
 
     {% if button.icon %}
       <span class="icon {{ button.icon.style }}">
@@ -19,14 +21,20 @@
   </div> {% comment %} buttons {% endcomment %}
 
 {% elsif item.type == "link" %}
-  <a class="{{ item.style }}" href="{{ site.url }}{{ item.link }}">
+  {% assign link = item.link %}
+  {% include util/prepend_link.html %}
+  <a class="{{ item.style }}" href="{{ link }}">
     {% include util/item_content.html %}
   </a>
 
 {% elsif item.type == "image" %}
   {% if item.link %}
-    <a href="{{ site.url }}{{ item.link }}">
-      <img class="{{ item.style }}" src="{{ site.url }}{{ item.file }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
+    {% assign link = item.link %}
+    {% include util/prepend_link.html %}
+    <a href="{{ link }}">
+      {% assign link = item.file %}
+      {% include util/prepend_link.html %}
+      <img class="{{ item.style }}" src="{{ link }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
     </a>
 
   {% else %}
