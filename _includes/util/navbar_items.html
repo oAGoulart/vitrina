@@ -3,7 +3,9 @@
     <div class="buttons">
 
     {% for button in item.content %}
-      <a class="button {{ button.style }}" href="{{ site.url }}{{ button.link }}">
+      {% assign link = button.link %}
+      {% include util/prepend_link.html %}
+      <a class="button {{ button.style }}" href="{{ link }}">
 
       {% if button.icon %}
         <span class="icon {{ button.icon.style }}">
@@ -21,7 +23,9 @@
   </div> {% comment %} navbar-item {% endcomment %}
 
 {% elsif item.type == "link" %}
-  <a class="navbar-item {{ item.style }}" href="{{ site.url }}{{ item.link }}">
+  {% assign link = item.link %}
+  {% include util/prepend_link.html %}
+  <a class="navbar-item {{ item.style }}" href="{{ link }}">
     {% include util/item_content.html %}
   </a>
 
@@ -38,22 +42,24 @@
 
     <div class="navbar-dropdown">
 
-    {% for link in item.links %}
+    {% for option in item.links %}
 
-      {% if link.divider %}
+      {% if option.divider %}
         <hr class="navbar-divider">
 
       {% else %}
-        <a class="navbar-item" href="{{ link.reference }}">
+        {% assign link = option.link %}
+        {% include util/prepend_link.html %}
+        <a class="navbar-item" href="{{ link }}">
 
-          {% if link.icon %}
-            <span class="icon {{ link.icon.style }}">
-              <i class="fa {{ link.icon.name }}"></i>
+          {% if option.icon %}
+            <span class="icon {{ option.icon.style }}">
+              <i class="fa {{ option.icon.name }}"></i>
             </span>
 
           {% endif %}
 
-          <span>{{ link.content | newline_to_br }}</span>
+          <span>{{ option.content | newline_to_br }}</span>
         </a>
 
       {% endif %}
