@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name          = 'vitrina'
-  s.version       = '0.1.2'
+  s.version       = '0.1.3'
   s.authors       = ['Augusto Goulart']
   s.email         = ['josegoulart.aluno@unipampa.edu.br']
 
