@@ -8,8 +8,7 @@
     <section class="hero is-fullheight is-primary has-background {{ part.style }}">
       {% assign link = part.background %}
       {% include util/prepend_link.html %}
-      <img class="hero-background" src="{{ link }}" alt="part.name">
-      }
+      <img class="hero-background" src="{{ link }}" alt="{{ part.name }}">
 
     {% else %}
     <section class="hero is-fullheight is-light {{ part.style }}">
