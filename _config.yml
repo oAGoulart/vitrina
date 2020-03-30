@@ -1,8 +1,28 @@
+# Jekyll configuration file for Vitrina
+
 title: Vitrina
 description: A general purpose Jekyll theme.
 url: "https://joseaugustogoulart.me/vitrina/"
 lang: en-US
-permalink: /:categories/:title
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/banner.png
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+      permalink: /:title
+      categories: posts
 
-# Don't change the configurations below
-exclude: [yarn.lock, Gemfile.lock, jekyll-theme-vitrina.gemspec, Gemfile, vendor, scripts, node_modules/bulma, node_modules/fork-awesome/*.md, node_modules/fork-awesome/*ss]
+# Caution with the configurations below
+exclude: [
+  yarn.lock,
+  Gemfile.lock,
+  jekyll-theme-vitrina.gemspec,
+  Gemfile, vendor, scripts,
+  node_modules/bulma,
+  node_modules/fork-awesome/*.md,
+  node_modules/fork-awesome/*ss
+]
