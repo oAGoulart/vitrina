@@ -52,10 +52,10 @@ The footer is divided in columns, to use them you need to add a Bulma style. Eac
 An example of column would be:
 ```json
 {
-  // colum size (Bulma class)
+  /* columm size (Bulma class) */
   "style": "is-3",
   "content": [
-    // elements here...
+    /* elements here... */
   ]
 }
 ```
@@ -219,7 +219,7 @@ All elements have the **style** attribute, which is any CSS class to be use for 
   "type": "text",
   "icon": {
     "style": "has-text-info",
-    // ForkAwesome icon name
+    /* ForkAwesome icon name */
     "name": "fa-feed"
   }
 }
