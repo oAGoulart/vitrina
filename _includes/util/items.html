@@ -38,6 +38,9 @@
     </a>
 
   {% else %}
+    {% assign link = item.file %}
+    {% include util/prepend_link.html %}
+    <img class="{{ item.style }}" src="{{ link }}" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}"></img>
 
   {% endif %}
 
