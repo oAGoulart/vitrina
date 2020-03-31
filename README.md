@@ -50,7 +50,7 @@ The header is divided into two element, `brand` and `menu`:
 The footer is divided in columns, to use them you need to add a Bulma style. Each column is defined with `content` attribute, which is a list with any elements defined in [Structure content](##structure-content).
 
 An example of column would be:
-```json
+```jsonc
 {
   /* columm size (Bulma class) */
   "style": "is-3",
@@ -101,7 +101,7 @@ A structure `content` is a list of elements that can be generated, below is a li
   - **content**: text to be put inside the button.
 
 An example:
-```json
+```jsonc
 {
 "type": "buttons",
   "content": [
@@ -119,7 +119,7 @@ An example:
 + **content**: text to be used with the link.
 
 An example:
-```json
+```jsonc
 {
   "style": "is-primary",
   "content": "See my resume",
@@ -135,7 +135,7 @@ An example:
 + **height**: image height.
 
 An example:
-```json
+```jsonc
 {
   "type": "image",
   "name": "Made with Bulma",
@@ -150,7 +150,7 @@ An example:
 + **content**: text to be used.
 
 An example:
-```json
+```jsonc
 {
   "type": "text",
   "content": "Except"
@@ -162,7 +162,7 @@ An example:
   - **name**: ForkAwesome icon name
 
 An example:
-```json
+```jsonc
 {
   "style": "is-large",
   "type": "icons",
@@ -184,7 +184,7 @@ Each card has the following attributes:
 + **content**: any element at [Structure content](#structure-content) can be used.
 
 An example:
-```json
+```jsonc
 {
   "title": "Pellentesque vitae ligula sem.",
   "image": "assets/img/card.png",
@@ -214,7 +214,7 @@ All elements have the following attributes:
 All elements have the **style** attribute, which is any CSS class to be use for styling, can be a Bulma one.
 
 **icon** -> attribute, which is any ForkAwesome icon in the following format:
-```json
+```jsonc
 {
   "type": "text",
   "icon": {
