@@ -24,7 +24,7 @@ bundle exec jekyll build
 
 If you need something else the scripts inside `scripts/` may help you out.
 
-This theme may be exacly what you need or exacly what you're trying to avoid. So if using JSON or learning this theme's layout is not what you want, here's some alternatives:
+This theme may be exactly what you need or exactly what you're trying to avoid. So if using JSON or learning this theme's layout is not what you want, here's some alternatives:
 
 + [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes)
 + [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll)
@@ -111,7 +111,7 @@ These arrays can have the following elements:
 {
   "style": "has-text-light",   // global attribute
   "type": "text",              // define this element as text
-  "content": "Some potatos",   // text to be shown
+  "content": "Some potatoes",   // text to be shown
 }
 
 ```
