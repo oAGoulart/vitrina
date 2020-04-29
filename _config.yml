@@ -1,6 +1,10 @@
 # Jekyll configuration file for Vitrina
+
+# Title of the site
 title: Vitrina
+# Description of the site
 description: A general purpose Jekyll theme.
+# Site URL
 url: "https://joseaugustogoulart.me/vitrina"
 lang: en-US
 paginate: 5
