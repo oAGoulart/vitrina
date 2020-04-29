@@ -26,7 +26,7 @@
     "build": "bundle exec jekyll serve"
   },
   "dependencies": {
-    "bulma": "^0.8.0",
+    "bulma": "^0.8.2",
     "fork-awesome": "^1.1.7"
   }
 }
