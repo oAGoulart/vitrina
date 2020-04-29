@@ -61,6 +61,21 @@
       </div> {% comment %} container {% endcomment %}
     </section> {% comment %} section {% endcomment %}
 
+  {% elsif part.structure == "timeline" %}
+    <section class="section {{ part.style }}">
+    {% if part.title %}
+      <div class="container content">
+        <h1 class="title">{{ part.title }}</h1>
+      </div>
+
+    {% endif %}
+
+      <div class="timeline">
+        {% include util/timeline_cards.html %}
+      </div>
+
+    </section> {% comment %} section {% endcomment %}
+
   {% elsif part.structure == "grid" %}
     <section class="section grid{{ part.style }}">
 
