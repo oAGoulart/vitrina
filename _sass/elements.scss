@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+main {
+  min-height: 100vh;
+}
+
 section:nth-child(odd) {
   background-color: $background;
 }
