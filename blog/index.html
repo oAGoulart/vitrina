@@ -7,36 +7,44 @@ title: Blog
   <div class="container">
     <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1><hr>
 
-  {% for post in paginator.posts %}
-    <h1>
-      <a class="title" href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  {% if paginator.total_posts < 1 %}
+    <div class="post-body has-text-centered">
+      There's no content to be shown here!
+    </div>
 
-    <p class="categories">
-    {% for category in post.categories %}
-      <span>{{ category }}</span>
+  {% else %}
+    {% for post in paginator.posts %}
+      <h1>
+        <a class="title" href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h1>
+
+      <p class="categories">
+      {% for category in post.categories %}
+        <span>{{ category }}</span>
+      {% endfor %}
+      </p>
+
+      <p class="author">
+      {% if page.author %}
+        <span>by {{ page.author }}</span>
+      {% endif %}
+
+      {% if page.author and page.date %}
+        <span> - </span>
+      {% endif %}
+
+      {% if post.date %}
+        <span>{{ post.date | date: '%B %d, %Y' }}</span>
+      {% endif %}
+      </p>
+
+      <div class="post-body">{{ post.excerpt }}</div><hr>
+
     {% endfor %}
-    </p>
 
-    <p class="author">
-    {% if page.author %}
-      <span>by {{ page.author }}</span>
-    {% endif %}
-
-    {% if page.author and page.date %}
-      <span> - </span>
-    {% endif %}
-
-    {% if post.date %}
-      <span>{{ post.date | date: '%B %d, %Y' }}</span>
-    {% endif %}
-    </p>
-
-    <div class="post-body">{{ post.excerpt }}</div><hr>
-
-  {% endfor %}
+  {% endif %}
 
   {% include pagination.html %}
 
