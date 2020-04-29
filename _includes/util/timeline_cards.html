@@ -1,0 +1,20 @@
+{% assign side = "left" %}
+
+{% for card in part.cards %}
+  <div class="timeline-card {{ side }}">
+    <div class="timeline-content {{ card.style }}">
+
+      {% for item in card.content %}
+        {% include util/items.html %}
+      {% endfor %}
+
+    </div> {% comment %} timeline-content {% endcomment %}
+  </div> {% comment %} timeline-card {% endcomment %}
+
+  {% if side == "left" %}
+    {% assign side = "right" %}
+  {% else %}
+    {% assign side = "left" %}
+  {% endif %}
+
+{% endfor %}

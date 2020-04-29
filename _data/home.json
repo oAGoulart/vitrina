@@ -121,6 +121,36 @@
     ]
   },
   {
+    "structure": "timeline",
+    "title": "Timeline",
+    "cards": [
+      {
+        "content": [
+          {
+            "type": "text",
+            "content": "2016"
+          },
+          {
+            "type": "text",
+            "content": "Lorem ipsum"
+          }
+        ]
+      },
+      {
+        "content": [
+          {
+            "type": "text",
+            "content": "2019"
+          },
+          {
+            "type": "text",
+            "content": "Lorem ipsum"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "structure": "grid",
     "title": "Featured",
     "cards": [
@@ -166,7 +196,6 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -186,7 +215,6 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -226,7 +254,6 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
