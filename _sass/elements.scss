@@ -220,3 +220,12 @@ section:nth-child(odd) {
     }
   }
 }
+
+.categories {
+  span {
+    background-color: $primary;
+    color: $primary-invert;
+    padding: 4px;
+    margin: 2px;
+  }
+}
