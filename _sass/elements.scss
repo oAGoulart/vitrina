@@ -1,16 +1,22 @@
 @charset "utf-8";
 
+main {
+  min-height: 100vh;
+}
+
 section:nth-child(odd) {
   background-color: $background;
 }
 
 .navbar-menu {
   background-color: $primary;
+  padding-right: 3rem;
 }
 
 .navbar-dropdown {
   background-color: $info;
   border: none;
+  border-radius: 0;
 
   .navbar-item {
     a {
@@ -76,4 +82,33 @@ section:nth-child(odd) {
 
 .buttons {
   padding: 1rem 0;
+}
+
+.button,
+.input,
+.textarea,
+.select select,
+.file-cta,
+.file-name,
+.pagination-previous,
+.pagination-next,
+.pagination-link,
+.pagination-ellipsis {
+  border-radius: 0;
+}
+
+.post-body {
+  margin: 1.5rem 0;
+
+  .task-list-item-checkbox {
+    margin: 0.5rem;
+  }
+
+  .highlight {
+    margin: 1rem 0;
+
+    pre {
+      padding: 1rem;
+    }
+  }
 }

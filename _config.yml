@@ -1,9 +1,14 @@
 # Jekyll configuration file for Vitrina
 
+# Title of the site
 title: Vitrina
+# Description of the site
 description: A general purpose Jekyll theme.
-url: "https://oagoulart.github.io/vitrina/"
+# Site URL
+url: "https://oagoulart.github.io/vitrina"
 lang: en-US
+paginate: 5
+paginate_path: /blog/:num
 defaults:
   - scope:
       path: ""
@@ -13,8 +18,8 @@ defaults:
       path: "_posts"
     values:
       layout: "post"
-      permalink: /:title
-      categories: posts
+      permalink: /blog/:title
+      categories: blog
 
 # Caution with the configurations below
 exclude: [

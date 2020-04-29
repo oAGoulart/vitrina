@@ -2,7 +2,7 @@
   {
     "structure": "hero",
     "name": "Vitrina",
-    "background": "assets/img/card.png",
+    "background": "/assets/img/card.png",
     "content": [
       {
         "style": "title is-size-1 is-uppercase has-text-centered",
@@ -109,12 +109,12 @@
           {
             "style": "is-primary",
             "content": "Contact me",
-            "link": "contact"
+            "link": "/contact"
           },
           {
             "style": "is-primary",
             "content": "See my resume",
-            "link": "resume"
+            "link": "/resume"
           }
         ]
       }
@@ -126,7 +126,7 @@
     "cards": [
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -146,7 +146,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -166,7 +166,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -186,7 +186,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -206,7 +206,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -226,7 +226,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -246,7 +246,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",
@@ -266,7 +266,7 @@
       },
       {
         "title": "Pellentesque vitae ligula sem.",
-        "image": "assets/img/card.png",
+        "image": "/assets/img/card.png",
         "content": [
           {
             "type": "text",

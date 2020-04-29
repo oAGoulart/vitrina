@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="section post">
+  <div class="container">
+    <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1>
+
+    <p class="categories has-text-centered">
+    {% for category in page.categories %}
+      <span>{{ category }}</span>
+    {% endfor %}
+    </p>
+
+    <p class="author has-text-centered">
+    {% if page.author %}
+      <span>by {{ page.author }}</span>
+    {% endif %}
+
+    {% if page.author and page.date %}
+      <span> - </span>
+    {% endif %}
+
+    {% if page.date %}
+      <span>{{ page.date | date: '%B %d, %Y' }}</span>
+    {% endif %}
+    </p><hr>
+
+    <div class="post-body">{{ content }}</div>
+  </div> {% comment %} container {% endcomment %}
+</div> {% comment %} section {% endcomment %}
