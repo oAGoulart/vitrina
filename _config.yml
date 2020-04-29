@@ -5,7 +5,7 @@ title: Vitrina
 # Description of the site
 description: A general purpose Jekyll theme.
 # Site URL
-url: "https://joseaugustogoulart.me/vitrina"
+url: "https://oagoulart.github.io/vitrina"
 lang: en-US
 paginate: 5
 paginate_path: /blog/:num
