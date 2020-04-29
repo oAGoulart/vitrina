@@ -1,9 +1,10 @@
 # Jekyll configuration file for Vitrina
-
 title: Vitrina
 description: A general purpose Jekyll theme.
-url: "https://joseaugustogoulart.me/vitrina/"
+url: "https://joseaugustogoulart.me/vitrina"
 lang: en-US
+paginate: 5
+paginate_path: /blog/:num
 defaults:
   - scope:
       path: ""
@@ -13,8 +14,8 @@ defaults:
       path: "_posts"
     values:
       layout: "post"
-      permalink: /:title
-      categories: posts
+      permalink: /blog/:title
+      categories: blog
 
 # Caution with the configurations below
 exclude: [

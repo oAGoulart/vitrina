@@ -1,0 +1,75 @@
+{% if paginator.total_pages > 1 %}
+  {% assign next_pages = paginator.total_pages | minus: paginator.page %}
+  {% assign page_offset = 2 %}
+  {% assign shown_pages = page_offset | times: 2 | plus: 1 %}
+  {% assign start_page = 1 %}
+  {% assign end_page = paginator.total_pages %}
+
+  {% if paginator.page > page_offset %}
+    {% if next_pages > page_offset %}
+      {% assign start_page = paginator.page | minus: page_offset %}
+      {% assign end_page = paginator.page | plus: page_offset %}
+    {% else %}
+      {% if paginator.page >= shown_pages %}
+        {% assign start_page = paginator.total_pages | minus: shown_pages | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% else %}
+    {% if next_pages >= shown_pages %}
+      {% assign end_page = shown_pages %}
+    {% endif %}
+  {% endif %}
+
+  <div class="page-nav">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+
+    {% if paginator.previous_page %}
+      <a class="pagination-previous" href="{{ paginator.previous_page_path | relative_url }}">Prev</a>
+    {% else %}
+      <a class="pagination-previous" disabled>Prev</a>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a class="pagination-next" href="{{ paginator.next_page_path | relative_url }}">Next</a>
+    {% else %}
+      <a class="pagination-next" disabled>Next</a>
+    {% endif %}
+
+      <ul class="pagination-list">
+        {% if paginator.page != 1 %}
+        <li><a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', '' }}">First</a></li>
+        {% else %}
+        <li><a class="pagination-link" disabled>First</a></li>
+        {% endif %}
+
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+      {% for page in (start_page..end_page) %}
+        {% if page == paginator.page %}
+        <li><a class="pagination-link is-current">{{ page }}</a></li>
+
+        {% elsif page == 1 %}
+        <li><a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', '' }}">1</a></li>
+
+        {% else %}
+        <li><a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
+
+        {% endif %}
+
+      {% endfor %}
+
+        <li><span class="pagination-ellipsis">&hellip;</span></li>
+
+        {% if paginator.page != paginator.total_pages %}
+        <li><a class="pagination-link" href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">Last</a></li>
+        {% else %}
+        <li><a class="pagination-link" disabled>Last</a></li>
+        {% endif %}
+
+      </ul> {% comment %} pagination-list {% endcomment %}
+
+    </nav> {% comment %} pagination {% endcomment %}
+
+  </div> {% comment %} page-nav {% endcomment %}
+
+{% endif %}
