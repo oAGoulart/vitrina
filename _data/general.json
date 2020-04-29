@@ -2,7 +2,7 @@
   "header": {
     "brand": {
       "name": "Brand",
-      "image": "assets/img/logo.png",
+      "image": "/assets/img/logo.png",
       "link": ""
     },
     "menu": {
@@ -14,7 +14,7 @@
             {
               "style": "is-info",
               "content": "Donate",
-              "link": "donate",
+              "link": "/donate",
               "icon": {
                 "style": "has-text-success",
                 "name": "fa-money"
@@ -28,7 +28,7 @@
           "style": "has-text-light",
           "type": "link",
           "content": "Blog",
-          "link": "blog",
+          "link": "/blog",
           "icon": {
             "style": "has-text-info",
             "name": "fa-feed"
@@ -38,7 +38,7 @@
           "style": "has-text-light",
           "type": "link",
           "content": "Projects",
-          "link": "projects",
+          "link": "/projects",
           "icon": {
             "style": "has-text-info",
             "name": "fa-gear"
@@ -48,7 +48,7 @@
           "style": "has-text-light",
           "type": "link",
           "content": "Papers",
-          "link": "papers",
+          "link": "/papers",
           "icon": {
             "style": "has-text-info",
             "name": "fa-flask"
@@ -62,7 +62,7 @@
             {
               "style": "has-text-light",
               "content": "Contact",
-              "link": "contact",
+              "link": "/contact",
               "icon": {
                 "style": "has-text-primary",
                 "name": "fa-envelope"
@@ -71,7 +71,7 @@
             {
               "style": "has-text-light",
               "content": "Resume",
-              "link": "resume",
+              "link": "/resume",
               "icon": {
                 "style": "has-text-primary",
                 "name": "fa-briefcase"
@@ -112,18 +112,18 @@
         {
           "type": "link",
           "content": "Privacy",
-          "link": "privacy"
+          "link": "/privacy"
         },
         {
           "type": "link",
           "content": "Disclaimer",
-          "link": "disclaimer"
+          "link": "/disclaimer"
         },
         {
           "type": "image",
           "name": "Made with Bulma",
           "link": "https://bulma.io",
-          "file": "assets/img/made-with-bulma.png",
+          "file": "/assets/img/made-with-bulma.png",
           "width": "128",
           "height": "24"
         }
