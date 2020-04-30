@@ -6,12 +6,6 @@ layout: default
   <div class="container">
     <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1>
 
-    <p class="categories has-text-centered">
-    {% for category in page.categories %}
-      <span>{{ category }}</span>
-    {% endfor %}
-    </p>
-
     <p class="author has-text-centered">
     {% if page.author %}
       <span>by {{ page.author }}</span>
@@ -24,6 +18,12 @@ layout: default
     {% if page.date %}
       <span>{{ page.date | date: '%B %d, %Y' }}</span>
     {% endif %}
+    </p>
+
+    <p class="categories has-text-centered">
+    {% for category in page.categories %}
+      <span>{{ category }}</span>
+    {% endfor %}
     </p><hr>
 
     <div class="post-body">{{ content }}</div>
