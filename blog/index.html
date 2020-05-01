@@ -10,29 +10,29 @@ title: Blog
   {% if paginator.posts[0] %}
     {% for post in paginator.posts %}
       <h1>
-        <a class="title" href="{{ post.url }}">
+        <a class="title" href="{{ post.url | relative_url }}">
           {{ post.title }}
         </a>
       </h1>
 
-      <p class="categories">
-      {% for category in post.categories %}
-        <span>{{ category }}</span>
-      {% endfor %}
-      </p>
-
       <p class="author">
-      {% if page.author %}
-        <span>by {{ page.author }}</span>
+      {% if post.author %}
+        <span>by {{ post.author }}</span>
       {% endif %}
 
-      {% if page.author and page.date %}
+      {% if post.author and post.date %}
         <span> - </span>
       {% endif %}
 
       {% if post.date %}
         <span>{{ post.date | date: '%B %d, %Y' }}</span>
       {% endif %}
+      </p>
+
+      <p class="categories">
+      {% for category in post.categories %}
+        <span>{{ category }}</span>
+      {% endfor %}
       </p>
 
       <div class="post-body">{{ post.excerpt }}</div><hr>
