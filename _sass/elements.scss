@@ -31,7 +31,7 @@ section:nth-child(odd) {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 10px) {
   .navbar.is-primary .navbar-start .navbar-link,
   .navbar.is-primary .navbar-end .navbar-link {
     &::after {
@@ -152,66 +152,68 @@ section:nth-child(odd) {
       }
     }
   }
-}
 
-.left::before,
-.right::before {
-  content: "";
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  top: 25px;
-  background-color: black;
-  transform: rotate(45deg);
-  z-index: 1;
-}
-
-.left {
-  left: 0;
-
-  &::before {
-    right: 33px;
-  }
-}
-
-.right {
-  left: 50%;
-
-  &::after {
-    left: -10px;
+  .left::before,
+  .right::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: 25px;
+    background-color: black;
+    transform: rotate(45deg);
+    z-index: 1;
   }
 
-  &::before {
-    left: 33px;
+  .left {
+    left: 0;
+
+    &::before {
+      right: 33px;
+    }
+  }
+
+  .right {
+    left: 50%;
+
+    &::after {
+      left: -10px;
+    }
+
+    &::before {
+      left: 33px;
+    }
   }
 }
 
 @media screen and (max-width: 500px) {
-  .timeline::after {
-    left: 36px;
+  .timeline {
+    &::after {
+      left: 36px;
+    }
 
     &-card {
       width: 100%;
-      padding: 5px 70px;
+      padding: 5px 0 5px 70px;
 
       &::before {
         left: 60px;
       }
     }
-  }
 
-  .left::after,
-  .right::after {
-    left: 26px;
-  }
+    .left::after,
+    .right::after {
+      left: 26px;
+    }
 
-  .left::before,
-  .right::before {
-    left: 62px;
-  }
+    .left::before,
+    .right::before {
+      left: 62px;
+    }
 
-  .right {
-    left: 0%;
+    .right {
+      left: 0%;
+    }
   }
 }
 
