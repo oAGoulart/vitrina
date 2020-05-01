@@ -5,25 +5,43 @@ main {
 }
 
 section:nth-child(odd) {
-  background-color: $background;
+  background-color: $grey-lighter;
 }
 
-.navbar-menu {
-  background-color: $primary;
-  padding-right: 3rem;
-}
+.navbar {
+  &-menu {
+    background-color: $primary;
+    padding-right: 3rem;
+  }
 
-.navbar-dropdown {
-  background-color: $info;
-  border: none;
-  border-radius: 0;
+  &-dropdown {
+    background-color: $info;
+    border: none;
+    border-radius: 0;
 
-  .navbar-item {
-    a {
-      &:hover,
-      &:focus {
-        background-color: transparent;
+    .navbar-item {
+      a {
+        &:hover,
+        &:focus,
+        &:focus-within {
+          background-color: transparent;
+        }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar.is-primary .navbar-start .navbar-link,
+  .navbar.is-primary .navbar-end .navbar-link {
+    &::after {
+      width: 0;
+      height: 0;
+      margin-top: -0.275em;
+      border-style: solid;
+      border-width: 10px 5px 0 5px;
+      border-color: $primary-invert transparent transparent transparent;
+      transform: none;
     }
   }
 }
@@ -38,20 +56,18 @@ section:nth-child(odd) {
     max-height: 3rem;
   }
 
-  a {
+  a,
+  .navbar-link
+  .button {
     &:hover,
+    &.is-hovered,
+    &:active,
+    &.is-active,
     &:focus,
+    &.is-focused,
     &:focus-within {
-      background-color: transparent;
+      background-color: $link-active;
     }
-  }
-}
-
-.navbar-link {
-  &:hover,
-  &:focus,
-  &:focus-within {
-    background-color: transparent;
   }
 }
 
@@ -63,7 +79,7 @@ section:nth-child(odd) {
 
   .column {
     .card:last-child {
-      margin-bottom: 0rem;
+      margin-bottom: 0;
     }
   }
 }
@@ -100,32 +116,42 @@ section:nth-child(odd) {
     background-color: $primary;
     margin-left: -3px;
   }
-}
 
-.timeline-card {
-  padding: 10px 40px;
-  position: relative;
-  width: 50%;
+  &-card {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
 
-  &::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 22px;
-    right: -10px;
-    background-color: $primary-invert;
-    border: 4px solid $primary;
-    transform: rotate(45deg);
-    z-index: 1;
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 22px;
+      right: -10px;
+      background-color: $primary-invert;
+      border: 4px solid $primary;
+      transform: rotate(45deg);
+      transition: ease 0.5s;
+      z-index: 1;
+    }
+
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: $primary;
+      color: $primary-invert;
+      position: relative;
+      transition: ease 0.5s;
+    }
+
+    &:hover {
+      font-size: larger;
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
   }
-}
-
-.timeline-content {
-  padding: 20px 30px;
-  background-color: $primary;
-  color: $primary-invert;
-  position: relative;
 }
 
 .left::before,
@@ -163,14 +189,14 @@ section:nth-child(odd) {
 @media screen and (max-width: 500px) {
   .timeline::after {
     left: 36px;
-  }
 
-  .timeline-card {
-    width: 100%;
-    padding: 5px 70px;
+    &-card {
+      width: 100%;
+      padding: 5px 70px;
 
-    &::before {
-      left: 60px;
+      &::before {
+        left: 60px;
+      }
     }
   }
 
@@ -206,19 +232,23 @@ section:nth-child(odd) {
   border-radius: 0;
 }
 
+.button {
+  &.is-primary:hover,
+  &.is-primary.is-hovered,
+  &.is-primary:active,
+  &.is-primary.is-active,
+  &.is-primary:focus,
+  &.is-primary.is-focused, {
+    background-color: $primary-invert;
+    color: $primary;
+  }
+}
+
 .post-body {
   margin: 1.5rem 0;
 
   .task-list-item-checkbox {
     margin: 0.5rem;
-  }
-
-  .highlight {
-    margin: 1rem 0;
-
-    pre {
-      padding: 1rem;
-    }
   }
 }
 
@@ -228,4 +258,12 @@ section:nth-child(odd) {
     padding: 4px;
     margin: 2px 0;
   }
+}
+
+.has-text-pink {
+  color: $pink;
+}
+
+hr {
+  background-color: $grey-lightest;
 }

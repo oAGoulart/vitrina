@@ -1,25 +1,64 @@
 @charset "utf-8";
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700|Source+Code+Pro:400,700&display=swap');
 
-// Colors
-$black: rgb(0, 0, 0);
-$grey: rgb(200, 200, 200);
-$white: rgb(255, 255, 255);
-$yellow: rgb(255, 225, 0);
-
-// Bulma's variables
+// Initial variables
 $family-sans-serif: 'Josefin Sans', sans-serif;
+$family-monospace: 'Source Code Pro', monospace;
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 78%);
+$grey-dark: hsl(0, 0%, 29%);
+$grey-lighter: hsl(0, 0%, 94%);
+$grey-lightest: hsl(0, 0%, 96%);
+$grey-superlight: hsl(0, 0%, 98%);
+$yellow: hsl(53, 100%, 50%);
+$pink: hsl(300, 100%, 50%);
+$blue: hsl(205, 84%, 50%);
+$cyan: hsl(180, 100%, 35%);
+$green: hsl(115, 67%, 38%);
+$blue-dark: hsl(205, 53%, 25%);
+$green-light: hsl(131, 65%, 58%);
+$red: hsl(5, 83%, 50%);
+$orange: hsl(41, 79%, 50%);
+$greenish: hsl(78, 36%, 53%);
+
+// Functions
+@function darkenColor($color) {
+  @if type-of($color) == 'color' {
+    @return change-color($color, $lightness: 40%);
+  }
+
+  @return $black;
+}
+
+// Derivated variables
 $primary: $black;
 $primary-invert: $yellow;
 $primary-light: $white;
 $primary-dark: $grey;
+
 $info: $yellow;
 $info-invert: $black;
-$primary-light: $white;
-$primary-dark: $grey;
+$info-light: $white;
+$info-dark: $grey;
+
 $link: $black;
 $link-invert: $yellow;
-$link-hover: $grey;
-$border-hover: $yellow;
+$link-dark: darkenColor($link);
+$link-hover: $link-dark;
+$link-hover-border: $link-dark;
+$link-focus: $link-dark;
+$link-focus-border: $link-dark;
+$link-active: $link-dark;
+$link-active-border: $link-dark;
+
+$text: $grey-dark;
+
+$background: $grey-superlight;
+
+$border-hover: $info;
+
+$font-code: $family-monospace;
