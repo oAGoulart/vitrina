@@ -6,18 +6,18 @@
       "link": ""
     },
     "menu": {
-      "style": "is-primary is-transparent",
+      "style": "is-transparent",
       "start": [
         {
           "type": "buttons",
           "content": [
             {
               "style": "is-info",
-              "content": "Donate",
-              "link": "/donate",
+              "content": "Support",
+              "link": "/support",
               "icon": {
-                "style": "has-text-success",
-                "name": "fa-money"
+                "style": "has-text-pink",
+                "name": "fa-heart"
               }
             }
           ]

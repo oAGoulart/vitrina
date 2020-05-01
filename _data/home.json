@@ -132,7 +132,7 @@
           },
           {
             "type": "text",
-            "content": "Lorem ipsum"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc lacinia ligula justo, non pulvinar neque ullamcorper sed."
           }
         ]
       },
@@ -144,7 +144,7 @@
           },
           {
             "type": "text",
-            "content": "Lorem ipsum"
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
           }
         ]
       }
