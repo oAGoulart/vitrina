@@ -20,6 +20,13 @@ defaults:
       layout: "post"
       permalink: /blog/:title
       categories: blog
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title
+  papers:
+    output: true
+    permalink: /papers/:title
 
 # Caution with the configurations below
 exclude: [
