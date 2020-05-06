@@ -40,7 +40,11 @@
       {% include util/item_content.html %}
     </a>
 
-    <div class="navbar-dropdown">
+    {% if dropdown_right %}
+      <div class="navbar-dropdown is-right">
+    {% else %}
+      <div class="navbar-dropdown">
+    {% endif %}
 
     {% for option in item.links %}
 
