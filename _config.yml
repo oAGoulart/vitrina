@@ -22,11 +22,9 @@ defaults:
       categories: blog
 collections:
   projects:
-    output: true
-    permalink: /projects/:title
+    output: false
   papers:
-    output: true
-    permalink: /papers/:title
+    output: false
 
 # Caution with the configurations below
 exclude: [
