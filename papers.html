@@ -1,0 +1,72 @@
+---
+layout: default
+title: Papers
+---
+
+<div class="section papers">
+  <div class="container">
+    <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1><hr>
+
+  {% if site.papers[0] %}
+    {% for paper in site.papers %}
+    <div class="paper">
+      <p class="information">
+        <span>{{ paper.type | default: 'Article' }}</span>
+
+      {% if paper.access.open %}
+        <span class="icon has-text-success">
+          <i class="fa fa-circle"></i>
+        </span>
+        <span><em>Text available</em></span>
+
+      {% else %}
+        <span class="icon has-text-danger">
+          <i class="fa fa-circle"></i>
+        </span>
+        <span><em>Text unavailable</em></span>
+
+      {% endif %}
+
+      </p> {% comment %} information {% endcomment %}
+
+      <p class="publication has-text-black">
+        {{ paper.title }}
+      </p>
+
+      <p class="reference">
+      {% if paper.publication.name %}
+        <span><a href="{{ paper.publication.link }}">{{ paper.publication.name }}</a>,</span>
+        <span>{{ paper.publication.reference }}</span>
+      {% endif %}
+
+      </p> {% comment %} reference {% endcomment %}
+
+      <p class="author">
+        {{ paper.authors | join: ', ' }}
+      </p>
+
+      <p class="download">
+      {% if paper.access.pdf %}
+        <a href="{{ paper.access.pdf }}">
+          <span class="icon has-text-danger">
+            <i class="fa fa-file-pdf-o"></i>
+          </span>
+          <span>
+            Download PDF
+          </span>
+        </a>
+
+      {% endif %}
+
+      </p> {% comment %} download {% endcomment %}
+    </div> {% comment %} paper {% endcomment %}
+
+    {% endfor %}
+
+  {% else %}
+    <p class="has-text-centered">There's no content to be shown here!</p>
+
+  {% endif %}
+
+  </div> {% comment %} container {% endcomment %}
+</div> {% comment %} section {% endcomment %}

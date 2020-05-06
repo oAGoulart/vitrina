@@ -8,6 +8,41 @@ section:nth-child(odd) {
   background-color: $grey-lighter;
 }
 
+.paper:not(last-child) {
+  margin-bottom: 1rem;
+}
+
+.project {
+  .hover {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 1;
+
+    span {
+      margin: 1rem;
+    }
+  }
+
+  &:hover {
+    .hover {
+      display: flex;
+    }
+  }
+}
+
 .navbar {
   &-menu {
     background-color: $primary;

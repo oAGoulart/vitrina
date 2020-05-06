@@ -1,0 +1,48 @@
+---
+layout: default
+title: Projects
+---
+
+<div class="section projects">
+  <div class="container">
+    <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1><hr>
+
+  {% if site.projects[0] %}
+    {% assign i = 0 %}
+
+    {% for project in site.projects %}
+
+      {% if i == 0 %}
+        <div class="columns">
+      {% endif %}
+
+      <div class="column">
+        <figure class="image is-16by9 project">
+          <a class="has-text-centered" href="{{ project.link }}">
+            <p class="hover has-text-info">
+              <span>{{ project.title | upcase }}</span>
+              <span class="icon">
+                <i class="fa fa-external-link"></i>
+              </span>
+            </p>
+            <img src="{{ project.image }}" alt="{{ project.title }}">
+          </a>
+        </figure>
+      </div>
+
+      {% if i == 1 %}
+        </div> {% comment %} columns {% endcomment %}
+        {% assign i = 0 %}
+      {% else %}
+        {% assign i = i | plus: 1 %}
+      {% endif %}
+
+    {% endfor %}
+
+  {% else %}
+    <p class="has-text-centered">There's no content to be shown here!</p>
+
+  {% endif %}
+
+  </div> {% comment %} container {% endcomment %}
+</div> {% comment %} section {% endcomment %}
