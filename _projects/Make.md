@@ -1,5 +1,5 @@
 ---
 title: Make
 link: /
-image: assets/img/make.png
+image: /assets/img/make.png
 ---

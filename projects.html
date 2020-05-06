@@ -21,14 +21,20 @@ title: Projects
       <div class="column">
         <p class="has-text-centered">{{ project.title }}</p>
         <figure class="image is-16by9 project">
-          <a class="has-text-centered" href="{{ project.link }}">
+          {% assign link = project.link %}
+          {% include util/prepend_link.html %}
+
+          <a class="has-text-centered" href="{{ link }}">
             <p class="hover has-text-info">
               <span>{{ project.title | upcase }}</span>
               <span class="icon">
                 <i class="fa fa-external-link"></i>
               </span>
             </p>
-            <img src="{{ project.image }}" alt="{{ project.title }}">
+            {% assign link = project.image %}
+            {% include util/prepend_link.html %}
+
+            <img src="{{ link }}" alt="{{ project.title }}">
           </a>
         </figure>
       </div>

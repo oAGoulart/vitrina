@@ -1,5 +1,5 @@
 ---
 title: Mood
 link: /
-image: assets/img/mood.png
+image: /assets/img/mood.png
 ---
