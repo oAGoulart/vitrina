@@ -12,9 +12,7 @@ title: Blog
   {% if paginator.posts[0] %}
     {% for post in paginator.posts %}
       <h1>
-        <a class="title" href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
+        <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h1>
 
       <p class="author">

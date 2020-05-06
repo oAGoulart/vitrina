@@ -75,10 +75,22 @@ section:nth-child(even) {
   }
 }
 
+.image.project {
+  background-color: $primary;
+}
+
 .navbar {
+  &-brand {
+    padding-left: 3rem;
+  }
+
   &-menu {
     background-color: $primary;
     padding-right: 3rem;
+  }
+
+  &-burger {
+    margin-right: 3rem;
   }
 
   &-dropdown {
@@ -95,6 +107,16 @@ section:nth-child(even) {
         }
       }
     }
+  }
+}
+
+a.navbar-item,
+.navbar-link {
+  &.is-active,
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: transparent;
   }
 }
 
@@ -121,20 +143,6 @@ section:nth-child(even) {
 .navbar-item {
   img {
     max-height: 3rem;
-  }
-
-  a,
-  .navbar-link
-  .button {
-    &:hover,
-    &.is-hovered,
-    &:active,
-    &.is-active,
-    &:focus,
-    &.is-focused,
-    &:focus-within {
-      background-color: $link-active;
-    }
   }
 }
 

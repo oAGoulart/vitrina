@@ -13,7 +13,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/img/banner.png
+      image: /assets/img/card.png
   - scope:
       path: "_posts"
     values:
