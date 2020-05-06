@@ -1,6 +1,6 @@
 ---
-title:  "Welcome, Human!"
-author: augusto
+title:  Welcome, Human!
+author: Augusto Goulart
 date:   2019-04-03 18:07:23 -0300
 categories:
   - jekyll

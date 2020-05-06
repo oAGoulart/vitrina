@@ -3,10 +3,12 @@ layout: default
 title: Blog
 ---
 
-<div class="section blog">
-  <div class="container">
-    <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1><hr>
+<div class="page-head">
+  <h1 class="title is-size-1 has-text-centered has-text-info">{{ page.title }}</h1>
+</div>
 
+<div class="section blog">
+  <div class="container page">
   {% if paginator.posts[0] %}
     {% for post in paginator.posts %}
       <h1>
