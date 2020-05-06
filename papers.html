@@ -37,8 +37,12 @@ title: Papers
 
       <p class="reference">
       {% if paper.publication.name %}
-        <span><a href="{{ paper.publication.link }}">{{ paper.publication.name }}</a>,</span>
+        {% assign link = paper.publication.link %}
+        {% include util/prepend_link.html %}
+
+        <span><a href="{{ link }}">{{ paper.publication.name }}</a>,</span>
         <span>{{ paper.publication.reference }}</span>
+
       {% endif %}
 
       </p> {% comment %} reference {% endcomment %}
@@ -49,13 +53,14 @@ title: Papers
 
       <p class="download">
       {% if paper.access.pdf %}
-        <a href="{{ paper.access.pdf }}">
+        {% assign link = paper.access.pdf %}
+        {% include util/prepend_link.html %}
+
+        <a href="{{ link }}">
           <span class="icon has-text-danger">
             <i class="fa fa-file-pdf-o"></i>
           </span>
-          <span>
-            Download PDF
-          </span>
+          <span>Download PDF</span>
         </a>
 
       {% endif %}

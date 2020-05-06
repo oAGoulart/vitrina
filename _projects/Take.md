@@ -1,5 +1,5 @@
 ---
 title: Take
 link: /
-image: assets/img/take.png
+image: /assets/img/take.png
 ---
