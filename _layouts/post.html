@@ -2,10 +2,12 @@
 layout: default
 ---
 
-<div class="section post">
-  <div class="container">
-    <h1 class="title is-size-1 has-text-centered">{{ page.title }}</h1>
+<div class="page-head">
+  <h1 class="title is-size-1 has-text-centered has-text-info">{{ page.title }}</h1>
+</div>
 
+<div class="section post">
+  <div class="container page">
     <p class="author has-text-centered">
     {% if page.author %}
       <span>by {{ page.author }}</span>
