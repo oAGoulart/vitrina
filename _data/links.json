@@ -1,0 +1,34 @@
+[
+  {
+    "reference": "https://twitter.com/",
+    "icon": "fa-twitter"
+  },
+  {
+    "reference": "https://github.com/",
+    "icon": "fa-github"
+  },
+  {
+    "reference": "https://medium.com/",
+    "icon": "fa-medium"
+  },
+  {
+    "reference": "https://discord.com/",
+    "icon": "fa-discord-alt"
+  },
+  {
+    "reference": "https://www.reddit.com/",
+    "icon": "fa-reddit-alien"
+  },
+  {
+    "reference": "https://www.deviantart.com/",
+    "icon": "fa-deviantart"
+  },
+  {
+    "reference": "https://www.pinterest.com/",
+    "icon": "fa-pinterest"
+  },
+  {
+    "reference": "https://codepen.io",
+    "icon": "fa-codepen"
+  }
+]

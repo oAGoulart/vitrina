@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+@mixin square-shadow {
+  -webkit-box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+}
+
 main {
   min-height: 100vh;
   background-color: $grey-lighter;
@@ -19,32 +25,74 @@ main {
     background-color: $white;
     padding: 4rem;
     margin-top: -8rem;
-    -webkit-box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
-    box-shadow: 0px 0px 10px -4px rgba(0,0,0,1);
+    @include square-shadow;
   }
 
   .projects {
-    background-color: $primary-invert;
-    color: $primary;
-    padding-top: 8rem;
-    margin: 0;
-
     .columns {
       padding: 1rem;
     }
   }
+
+  .contacts,
+  .projects {
+    min-height: 100vh;
+    background-color: $primary-invert;
+    color: $primary;
+    padding: 8rem 0;
+    margin: 0;
+  }
 }
 
-section:nth-child(even) {
+.section:nth-child(even) {
   background-color: $white;
 }
 
-.paper:not(last-child) {
+.section.contacts-card {
+  margin-top: 10rem;
+  background-color: inherit;
+
+  h1 {
+    font-weight: bold;
+  }
+}
+
+.column.contact {
+  background-color: $primary;
+  color: $primary-invert;
+  @include square-shadow;
+  margin-right: 3rem;
+  padding: 1rem;
+  height: 100%;
+
+  .links {
+    padding: 1rem;
+    line-height: 5rem;
+
+    .link {
+      margin: 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section.contacts-card {
+    margin-left: 10rem;
+    margin-right: 5rem;
+  }
+
+  .column.contact {
+    margin-left: -8rem;
+  }
+}
+
+.paper:not(:last-child) {
   margin-bottom: 1rem;
 }
 
 .project {
+  @include square-shadow;
+
   .hover {
     display: none;
     position: absolute;
@@ -80,6 +128,8 @@ section:nth-child(even) {
 }
 
 .navbar {
+  @include square-shadow;
+
   &-brand {
     padding-left: 3rem;
   }
@@ -120,7 +170,7 @@ a.navbar-item,
   }
 }
 
-@media screen and (min-width: 10px) {
+@media screen and (min-width: 1px) {
   .navbar.is-primary .navbar-start .navbar-link,
   .navbar.is-primary .navbar-end .navbar-link {
     &::after {
