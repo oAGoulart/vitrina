@@ -26,6 +26,24 @@ main {
     padding: 4rem;
     margin-top: -8rem;
     @include square-shadow;
+
+    &.page-resume {
+      padding: 0;
+
+      .columns {
+        margin: 0;
+        padding: 0;
+
+        .column {
+          padding: 4rem;
+
+          &.resume-profile {
+            background-color: $primary;
+            color: $primary-invert;
+          }
+        }
+      }
+    }
   }
 
   .projects {
@@ -35,7 +53,8 @@ main {
   }
 
   .contacts,
-  .projects {
+  .projects,
+  .resume {
     min-height: 100vh;
     background-color: $primary-invert;
     color: $primary;
@@ -48,7 +67,7 @@ main {
   background-color: $white;
 }
 
-.section.contacts-card {
+.section.section-card {
   margin-top: 10rem;
   background-color: inherit;
 
@@ -76,7 +95,7 @@ main {
 }
 
 @media screen and (min-width: 1000px) {
-  .section.contacts-card {
+  .contacts .section.section-card {
     margin-left: 10rem;
     margin-right: 5rem;
   }
@@ -382,6 +401,11 @@ a.navbar-item,
     background-color: $primary-invert;
     color: $primary;
   }
+
+  &.is-link {
+    background-color: $primary-invert;
+    color: $primary;
+  }
 }
 
 .post-body {
@@ -402,6 +426,14 @@ a.navbar-item,
 
 .has-text-pink {
   color: $pink;
+}
+
+.progress {
+  border: 4px solid $primary-invert;
+}
+
+.centered {
+  margin: auto;
 }
 
 hr {
