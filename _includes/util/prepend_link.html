@@ -1,5 +1,5 @@
 {% assign string = link | replace_first: "http", "" %}
 
 {% if link == string %}
-  {% assign link = string | prepend: site.url %}
+  {% assign link = string | absolute_url %}
 {% endif %}

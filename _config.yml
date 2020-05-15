@@ -2,7 +2,7 @@
 
 title: Vitrina
 description: A general purpose Jekyll theme.
-url: https://oagoulart.github.io/vitrina
+url: https://oagoulart.github.io # /vitrina
 lang: en-US
 paginate: 5
 paginate_path: /blog/:num
