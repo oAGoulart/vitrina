@@ -3,7 +3,7 @@
 title: Vitrina
 description: A general purpose Jekyll theme.
 url: https://oagoulart.github.io
-baseurl: vitrina/
+baseurl: /vitrina
 lang: en-US
 paginate: 5
 paginate_path: /blog/:num
@@ -11,7 +11,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: assets/img/card.png
+      image: /assets/img/card.png
   - scope:
       path: _posts
     values:
