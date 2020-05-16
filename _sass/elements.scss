@@ -61,6 +61,7 @@ main {
 
           &.resume-info {
             margin-left: 5rem;
+            overflow-wrap: break-word;
 
             .info {
               position: relative;
