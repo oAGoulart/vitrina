@@ -6,7 +6,7 @@
   "author": {
     "name": "Augusto Goulart",
     "email": "josegoulart.aluno@unipampa.edu.br",
-    "url": "https://joseaugustogoulart.me"
+    "url": "https://oagoulart.github.io"
   },
   "license": "MIT",
   "keywords": [
@@ -21,9 +21,9 @@
     "url": "https://github.com/oAGoulart/vitrina/issues"
   },
   "scripts": {
-    "install": "./scripts/installing",
-    "lint": "ruby ./scripts/validate",
-    "build": "bundle exec jekyll serve"
+    "install": "./scripts/install.sh",
+    "lint": "./scripts/validate.rb",
+    "build": "bundle exec jekyll build"
   },
   "dependencies": {
     "bulma": "^0.8.2",
