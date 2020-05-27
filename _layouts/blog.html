@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<div class="page-head">
+  <h1 class="title is-size-1 has-text-centered has-text-info">{{ page.title }}</h1>
+</div>
+
+<div class="section blog">
+  <div class="container page">
+  {% if paginator.posts[0] %}
+    {% for post in paginator.posts %}
+      <h1>
+        <a class="title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h1>
+
+      <p class="author">
+      {% if post.author %}
+        <span>by {{ post.author }}</span>
+      {% endif %}
+
+      {% if post.author and post.date %}
+        <span> - </span>
+      {% endif %}
+
+      {% if post.date %}
+        <span>{{ post.date | date: '%B %d, %Y' }}</span>
+      {% endif %}
+      </p>
+
+      <p class="categories">
+      {% for category in post.categories %}
+        <span>{{ category }}</span>
+      {% endfor %}
+      </p>
+
+      <div class="post-body">{{ post.excerpt }}</div><hr>
+
+    {% endfor %}
+
+  {% else %}
+    <div class="post-body">
+      <p class="has-text-centered">There's no content to be shown here!</p>
+    </div>
+
+  {% endif %}
+
+  {% include pagination.html %}
+
+  </div> {% comment %} container {% endcomment %}
+</div> {% comment %} section {% endcomment %}
