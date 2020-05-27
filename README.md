@@ -1,4 +1,4 @@
-[![Vitrina](https://live.staticflickr.com/65535/49939899993_b37f8c2a56_o.png)]()
+[![Vitrina](screenshot.png)]()
 
 [![Build Status](https://travis-ci.com/oAGoulart/vitrina.svg?branch=master)](https://travis-ci.com/oAGoulart/vitrina)
 [![Gem](https://img.shields.io/gem/v/vitrina)](https://rubygems.org/gems/vitrina)
