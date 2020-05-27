@@ -112,7 +112,7 @@
             "link": "/contact"
           },
           {
-            "style": "is-primary",
+            "style": "is-info",
             "content": "See my resume",
             "link": "/resume"
           }
