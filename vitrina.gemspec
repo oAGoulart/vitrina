@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name          = 'vitrina'
-  s.version       = '0.2.4'
+  s.version       = '0.2.5'
   s.authors       = ['Augusto Goulart']
   s.email         = ['josegoulart.aluno@unipampa.edu.br']
 
@@ -12,9 +12,7 @@ Gem::Specification.new do |s|
 
   s.metadata['plugin_type'] = 'theme'
 
-  s.files = `git ls-files -z`.split('\x0').select do |f|
-    f.match(%r{^(assets|_(includes|layouts|sass|posts)/|
-               (LICENSE|README)((\.(txt|md|markdown|json)|$)))}i)
+  s.files = `git ls-files -z`.split('\x0')
   end
 
   s.platform = Gem::Platform::RUBY
