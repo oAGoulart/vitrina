@@ -69,7 +69,7 @@ main {
             }
 
             .years {
-              border-top: 4px solid #ffe100;
+              border-top: 4px solid $primary-invert;
               left: -6rem;
               position: relative;
               text-align: right;
@@ -104,7 +104,7 @@ main {
   }
 }
 
-ul {
+ul:not(.task-list) {
   list-style: square inside;
 }
 
