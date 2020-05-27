@@ -1,5 +1,8 @@
 [![Vitrina](https://live.staticflickr.com/65535/49939899993_b37f8c2a56_o.png)]()
 
+[![Build Status](https://travis-ci.com/oAGoulart/vitrina.svg?branch=master)](https://travis-ci.com/oAGoulart/vitrina)
+[![Gem](https://img.shields.io/gem/v/vitrina)](https://rubygems.org/gems/vitrina)
+[![Gem](https://img.shields.io/gem/dt/vitrina)](https://rubygems.org/gems/vitrina)
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 
 A general purpose theme for Jekyll made with Bulma.
