@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.6] - 2020-05-27
+
+### Changed
+
+- Gem files registration method
+
 ## [0.2.5] - 2020-05-27
 
 ### Fixed
