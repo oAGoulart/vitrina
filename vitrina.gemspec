@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name          = 'vitrina'
-  s.version       = '0.2.5'
+  s.version       = '0.2.6'
   s.authors       = ['Augusto Goulart']
   s.email         = ['josegoulart.aluno@unipampa.edu.br']
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.metadata['plugin_type'] = 'theme'
 
-  s.files = Dir['./**/']
+  s.files = `git ls-files`.split("\n")
 
   s.platform = Gem::Platform::RUBY
   s.add_runtime_dependency 'github-pages'

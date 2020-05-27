@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.6] - 2020-05-27
+
+### Changed
+
+- Gem files registration method
+
 ## [0.2.5] - 2020-05-27
 
 ### Fixed
@@ -45,7 +51,8 @@ All notable changes to this project will be documented in this file.
 - Unnecessary files from Jekyll build/serve
 
 
-[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.5...HEAD
+[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.6...HEAD
+[0.2.6]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.6
 [0.2.5]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.5
 [0.2.4]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.4
 [0.2.2]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.2
