@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.5] - 2020-05-27
+
+### Fixed
+
+- Gem not packing all files
+
 ## [0.2.4] - 2020-05-27
 
 ### Fixed
@@ -39,7 +45,8 @@ All notable changes to this project will be documented in this file.
 - Unnecessary files from Jekyll build/serve
 
 
-[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.4...HEAD
+[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.5...HEAD
+[0.2.5]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.5
 [0.2.4]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.4
 [0.2.2]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.2
 [0.2.0]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.0
