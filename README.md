@@ -30,12 +30,7 @@ You can use this theme as a template for creating another one or use it as a *Ru
 gem install vitrina --vendor
 ```
 
-If you just want to use this theme for a web site, all you need to do is change the layout and build it with Jekyll:
-
-```sh
-bundle install
-bundle exec jekyll build
-```
+If you just want to use this theme for a web site, all you need to do is [change your Jekyll project theme](https://jekyllrb.com/docs/themes/#installing-a-theme).
 
 If you need something else the scripts inside `scripts/` may help you out.
 
