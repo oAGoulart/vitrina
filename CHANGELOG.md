@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.2] - 2020-05-27
+
+### Added
+
+- 404 error page.
+- Screenshot image.
+
 ## [0.2.0] - 2020-05-27
 
 ### Added
@@ -19,6 +26,10 @@ All notable changes to this project will be documented in this file.
 - Resume years bar color not using color variables
 - Color of home page about section button
 - Task list style
+
+### Removed
+
+- Unnecessary files from Jekyll build/serve
 
 
 [unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.0...HEAD
