@@ -1,4 +1,4 @@
-# Vitrina
+[![Vitrina](https://live.staticflickr.com/65535/49939899993_b37f8c2a56_o.png)]()
 
 [![License](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 
@@ -6,34 +6,46 @@ A general purpose theme for Jekyll made with Bulma.
 
 This theme was made with the purpose of being able to generate a site just by editing a few JSON files, this was something I needed for creating multiple pages using scripts.
 
-**NOTE**: This theme is still in development phase and the documentation below may not cover everything.
+# Summary
 
-## Usage
++ [Usage](#usage)
+  - [About the layout](#about-the-layout)
+  - [General layout](#general-layout)
+    + [Header](#header)
+    + [Footer](#footer)
+  - [Home page layout](#home-page-layout)
+  - [Resume page layout](#resume-page-layout)
+  - [Structure content](#structure-content)
+  - [Links](#links)
++ [Contributions](#contributions)
 
-To use this theme you can use as a template for creating another one or use it as a *Ruby* gem in your project (just like a plugin):
+# Usage
+
+You can use this theme as a template for creating another one or use it as a *Ruby* gem in your project (just like a plugin):
 
 ```sh
 gem install vitrina --vendor
 ```
 
-If you just want to use this theme in for a web site all you need to do is to change the layout and use Jekyll to build it:
+If you just want to use this theme for a web site, all you need to do is change the layout and build it with Jekyll:
 
 ```sh
+bundle install
 bundle exec jekyll build
 ```
 
 If you need something else the scripts inside `scripts/` may help you out.
 
-This theme may be exactly what you need or exactly what you're trying to avoid. So if using JSON or learning this theme's layout is not what you want, here's some alternatives:
+This theme may be exactly what you need or exactly what you're trying to avoid. So, if using JSON or learning this theme's layout is not what you want, here's some alternatives:
 
 + [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes)
 + [beautiful-jekyll](https://github.com/daattali/beautiful-jekyll)
 
 ## About the layout
 
-The layout is made by many elements, all elements have global attributes, while some have specific one.
+The layout is made by many elements, all elements have global attributes, while some have specific ones.
 
-Any element *CAN* have the following global attributes:
+Any element **CAN** have the following global attributes:
 
 `style`: any CSS class to be used for styling, can be a Bulma one.
 ```jsonc
@@ -50,14 +62,12 @@ Any element *CAN* have the following global attributes:
 
 ## General layout
 
-The file at `_data/general.json` can be used to change the site's layout (navbar and footer).
-The `header` is a JSON `object` and the `footer` is an array, see below on how they are structured:
-
-**NOTE**: See the file at `_data/general.json` for examples, you may want to edit what is already there.
+The file at `_data/general.json` can be used to change the site's navbar and footer layout.
+The `header` is a JSON `object` and the `footer` is an array, see below on how they are structured.
 
 ### Header
 
-The `header` is divided into two JSON objects, `brand` and `menu`, see their usage below:
+The `header` is divided into two JSON objects, `brand` and `menu`:
 
 `brand`: Has the following structure:
 ```jsonc
@@ -135,9 +145,9 @@ These arrays can have the following elements:
 
 ```
 
-### Footer layout
+### Footer
 
-The `footer` is an array that can generate columns, to use them you need to add a Bulma style. Each column has a `content` attribute, which is an array with any elements defined in [Structure content](##structure-content).
+The `footer` is an array that can generate columns, to use them you need to add a Bulma style. Each column has a `content` attribute, which is an array with any elements defined in [structure content](#structure-content).
 
 An example of footer would be:
 ```jsonc
@@ -145,7 +155,7 @@ An example of footer would be:
   {
     "style": "is-3",     // column of size 3 (see Bulma docs)
     "content": [
-      // ... put the elements here ...
+      // ... put elements here ...
     ]
   }
   // ... put other columns here ...
@@ -154,7 +164,7 @@ An example of footer would be:
 
 ## Home page layout
 
-Right now there is only one page you may generate using a JSON file, the home page `_data/home.json`, this file has an array of structure. Those structures are pre-defined elements that can contain many more elements (but not other structures).
+The home page `_data/home.json` has an array of structures. Those structures are pre-defined elements that can contain many more elements (but not other structures).
 
 **hero:** The same as a Bulma hero.
 ```jsonc
@@ -180,6 +190,22 @@ Right now there is only one page you may generate using a JSON file, the home pa
       ]
     }
     // ... put other items arrays here ...
+  ]
+}
+```
+
+**timeline:** A timeline that can be used to display time organized cards:
+```jsonc
+{
+  "structure": "timeline",   // define timeline structure
+  "title": "Timeline",       // timeline title
+  "cards": [
+    {
+      "content": [
+        // ... put elements in here ...
+      ]
+    },
+    // ... put more cards here ...
   ]
 }
 ```
@@ -213,11 +239,75 @@ Right now there is only one page you may generate using a JSON file, the home pa
 }
 ```
 
-Take a look at `_data/home.json` for better examples.
+## Resume page layout
+
+The resume page `_data/resume.json` has some strict elements. Those elements are similar to the ones found in [structure content](#structure-content).
+
+**photo:** A link to the resume photo.
+```jsonc
+{
+  "photo": "/assets/img/icon.png", // link
+}
+```
+
+**name:** The name of the resume holder.
+```jsonc
+{
+  "name": "Vitrina", // name
+}
+```
+
+**title:** The title of the resume holder.
+```jsonc
+{
+  "title": "Malding Scientist", // title
+}
+```
+
+**skills:** A list of skills bars.
+```jsonc
+{
+  "skills": [
+    {
+      "icon": "fa-html5",  // skill bar icon
+      "progress": {        // progress bar
+        "value": 90,       // progress bar current value
+        "max": 100         // progress bar maximum value
+      }
+    }
+   // ... more skills here ... 
+  ]
+}
+```
+
+**profile:** A list of informational sections.
+```jsonc
+{
+  "profile": [                 // array of sections
+    {
+      "title": "Experience",   // section title
+      "info": [                // array of information
+        {
+          "years": "1001-1312",    // information year
+          "text": "Malder",        // information text
+          "list": [                // array of lines (optional)
+            {
+              "text": "Achived malding"    // line text
+            }
+            // ... more lines here ...
+          ]
+        }
+        // ... more information here ...
+      ]
+    }
+    // ... more sections here ... 
+  ]
+}
+```
 
 ## Structure content
 
-The elements below can be used inside any structure and inside a few other elements (see above):
+The elements below can be used inside any structure and inside a few other elements:
 
 **buttons:** A list of buttons to be generated.
 ```jsonc
@@ -279,9 +369,23 @@ The elements below can be used inside any structure and inside a few other eleme
 }
 ```
 
+## Links
+
+The links `_data/links.json` are used to generate contact information for the contact page. They are organized inside an array that can have many links organized as such:
+
+```jsonc
+[     // array
+  {
+    "reference": "https://twitter.com/",  // link reference
+    "icon": "fa-twitter"                  // link icon
+  }
+  // ... more links here ...
+]
+```
+
 ---
 
-## Contributions
+# Contributions
 
 Feel free to leave your contribution here, I would really appreciate it!
 Also, if you have any doubts or troubles using this package just contact me or leave an issue.
