@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.metadata['plugin_type'] = 'theme'
 
-  s.files = `git ls-files -z`.split('\x0')
+  s.files = Dir['./**/']
 
   s.platform = Gem::Platform::RUBY
   s.add_runtime_dependency 'github-pages'
