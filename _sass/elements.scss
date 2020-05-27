@@ -21,7 +21,6 @@ hr {
 }
 
 main {
-  background-color: $grey-lighter;
   min-height: 100vh;
 
   .contacts,
@@ -102,6 +101,10 @@ main {
 
   & > .section:nth-child(even) {
     background-color: $white;
+  }
+
+  & > .section:nth-child(odd) {
+    background-color: $grey-lighter;
   }
 }
 

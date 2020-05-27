@@ -41,6 +41,24 @@ This theme may be exactly what you need or exactly what you're trying to avoid. 
 
 ## About the layout
 
+There are some layouts at `_layouts` which can be used to create an entire page by just making a markdown page, those include:
+
++ blog (this one uses pagination, ext. must be `.html`)
++ contact
++ error
++ home
++ papers
++ post
++ projects
++ resume
+
+```md
+---
+layout: contact
+title: Contact
+---
+```
+
 The layout is made by many elements, all elements have global attributes, while some have specific ones.
 
 Any element **CAN** have the following global attributes:
