@@ -1,0 +1,80 @@
+{
+  "photo": "/assets/img/icon.png",
+  "name": "Vitrina",
+  "title": "Malding Scientist",
+  "skills": [
+    {
+      "icon": "fa-html5",
+      "progress": {
+        "value": 90,
+        "max": 100
+      }
+    },
+    {
+      "icon": "fa-android",
+      "progress": {
+        "value": 50,
+        "max": 100
+      }
+    },
+    {
+      "icon": "fa-gimp",
+      "progress": {
+        "value": 30,
+        "max": 100
+      }
+    },
+    {
+      "icon": "fa-css3",
+      "progress": {
+        "value": 90,
+        "max": 100
+      }
+    },
+    {
+      "icon": "fa-php",
+      "progress": {
+        "value": 75,
+        "max": 100
+      }
+    },
+    {
+      "icon": "fa-python",
+      "progress": {
+        "value": 95,
+        "max": 100
+      }
+    }
+  ],
+  "profile": [
+    {
+      "title": "Education",
+      "info": [
+        {
+          "years": "2015-2069",
+          "text": "B.S. in Malding Science, Vitrina University"
+        }
+      ]
+    },
+    {
+      "title": "Experience",
+      "info": [
+        {
+          "years": "1001-1312",
+          "text": "Malder in Chief - <em>Malding Industries</em>",
+          "list": [
+            {
+              "text": "Achived malding supreme ultra nuclear."
+            },
+            {
+              "text": "Lead malding experts to accomplish MALDNESS."
+            },
+            {
+              "text": "Instructed junior staff on the Art of Malding."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

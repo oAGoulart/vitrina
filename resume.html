@@ -9,67 +9,53 @@ title: Resume
     <div class="container page page-resume">
       <div class="columns">
         <div class="column is-5 resume-profile">
-          {% assign link = "/assets/img/icon.png" %}
-          {% include util/prepend_link.html %}
+          {% assign data = site.data.resume %}
 
+          {% assign link = data.photo %}
+          {% include util/prepend_link.html %}
           <img class="image centered is-128x128" src="{{ link }}">
-          <h1 class="is-size-1 has-text-centered">Vitrina</h1>
-          <p class="has-text-centered">Malding Scientist</p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-html5"></i>
-            </span>
-            <progress class="progress" value="90" max="100">90%</progress>
-          </p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-android"></i>
-            </span>
-            <progress class="progress" value="50" max="100">50%</progress>
-          </p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-gimp"></i>
-            </span>
-            <progress class="progress" value="30" max="100">30%</progress>
-          </p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-css3"></i>
-            </span>
-            <progress class="progress" value="90" max="100">90%</progress>
-          </p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-php"></i>
-            </span>
-            <progress class="progress" value="75" max="100">75%</progress>
-          </p>
-          <p class="skill">
-            <span class="icon is-big has-text-info">
-              <i class="fa fa-2x fa-python"></i>
-            </span>
-            <progress class="progress" value="80" max="100">80%</progress>
-          </p>
-        </div>
+
+          <h1 class="is-size-1 has-text-centered">{{ data.name }}</h1>
+          <p class="has-text-centered">{{ data.title }}</p>
+
+        {% if data.skills %}
+          {% for skill in data.skills %}
+            <p class="skill {{ skill.style }}">
+              <span class="icon is-big has-text-info">
+                <i class="fa fa-2x {{ skill.icon }}"></i>
+              </span>
+              <progress class="progress {{ skill.progress.style }}" value="{{ skill.progress.value }}" max="{{ skill.progress.max }}">{{ skill.progress.value }}%</progress>
+            </p>
+
+          {% endfor %}
+
+        {% endif %}
+
+        </div> {% comment %} resume-profile {% endcomment %}
+
         <div class="column resume-info has-text-dark">
-          <h1 class="is-size-3">Education</h1>
-          <p class="years">2015-2069</p>
-          <p class="info">
-            B.S. in Malding Science, Vitrina University
-          </p>
-          <h1 class="is-size-3">Experience</h1>
-          <p class="years">1001-1312</p>
-          <p class="info">
-            Malder in Chief - <em>Malding Industries</em>
-          </p>
-          <ul class="info">
-            <li>Achived malding supreme ultra nuclear.</li>
-            <li>Lead malding experts to accomplish MALDNESS.</li>
-            <li>Instructed junior staff on the Art of Malding.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        {% for section in data.profile %}
+          <h1 class="is-size-3 {{ section.style }}">{{ section.title }}</h1>
+
+          {% for item in section.info %}
+            <p class="years {{ item.style }}">{{ item.years }}</p>
+            <p class="info {{ item.style }}">{{ item.text }}</p>
+
+            {% if item.list %}
+              <ul class="info {{ item.style }}">
+                {% for line in item.list %}
+                  <li class="{{ line.style }}">{{ line.text }}</li>
+                {% endfor %}
+
+              </ul> {% comment %} info {% endcomment %}
+            {% endif %}
+
+          {% endfor %}
+
+        {% endfor %}
+
+        </div> {% comment %} resume-info {% endcomment %}
+      </div> {% comment %} columns {% endcomment %}
+    </div> {% comment %} page-resume {% endcomment %}
+  </div> {% comment %} section-card {% endcomment %}
+</div> {% comment %} resume {% endcomment %}
