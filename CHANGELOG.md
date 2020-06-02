@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [0.2.8] - 2020-06-2
+
+### Added
+
+- Put troubleshooting into documentation
+
+### Changed
+
+- Contact layout now don't have a pre-defined contact form
+
 ## [0.2.6] - 2020-05-27
 
 ### Changed
@@ -51,7 +61,8 @@ All notable changes to this project will be documented in this file.
 - Unnecessary files from Jekyll build/serve
 
 
-[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.6...HEAD
+[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.8...HEAD
+[0.2.8]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.8
 [0.2.6]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.6
 [0.2.5]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.5
 [0.2.4]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.4
