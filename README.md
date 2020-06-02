@@ -20,6 +20,7 @@ This theme was made with the purpose of being able to generate a site just by ed
   - [Resume page layout](#resume-page-layout)
   - [Structure content](#structure-content)
   - [Links](#links)
++ [Troubleshooting](#troubleshooting)
 + [Contributions](#contributions)
 
 # Usage
@@ -397,6 +398,99 @@ The links `_data/links.json` are used to generate contact information for the co
   }
   // ... more links here ...
 ]
+```
+
+# Troubleshooting
+
+These are some known issues that you may encouter:
+
+**Using this theme with GitHub Pages**
+---
+
+> GitHub Pages have strict rules for which Jekyll plugins can be used
+> with that being said [they do permit the use of any Jekyll themes publicly hosted on GitHub](https://github.blog/2017-11-29-use-any-theme-with-github-pages/)
+> to use this theme with GitHub pages add the `remote_theme` config to your `_config.json` with the `oAGoulart/vitrina` value
+
+```yaml
+remote_theme: oAGoulart/vitrina
+theme: vitrina
+```
+
+**Customizing this theme with SCSS**
+---
+
+> to change the theme looks you need to create a file called `assets/css/styles.scss`
+> then use the template below to add your own styles
+
+```scss
+---
+---
+@charset "utf-8";
+
+// this is the default values for color and font
+@import "customize.scss";
+// ... you can change those and put here your own ...
+// an example would be changing the primary color:
+// $primary: white;
+// that would make all elements that use that color white.
+// you could also use variables:
+// $primary: $white;
+
+// these are third party libraries
+@import "_bulma.scss";
+@import "_fork_awesome.scss";
+
+// these are the actual theme styles for the elements
+@import "elements.scss";
+@import "code.scss";
+```
+
+**ForkAwesome icons font not found**
+---
+
+> this issue is caused if you do not have the `fork-awesome` node package located under `node_modules/fork-awesome`
+> to fix this you should add `fork-awesome` as a dependency and install it using Yarn
+> also you can download and extract it inside that folder if you prefer
+
+```json
+"dependencies": {
+  "fork-awesome": "^1.1.7"
+}
+```
+
+**No repo name found. Specify using PAGES_REPO_NWO environment variables, 'repository' in your configuration, or set up an 'origin' git remote pointing to your github.com repository.**
+---
+
+> this is caused if you don't have a **GitHub** repository setup
+> it is necessary when using `github-pages` gem
+
+```rb
+gem 'github-pages', group: :jekyll_plugins
+```
+
+**Unknown tag 'seo' included in /_layouts/default.html**
+---
+
+> this issue is caused when the plugin `jekyll-seo-tag` is not specified at `_config.json`
+
+```yaml
+plugins:
+  - jekyll-seo-tag
+```
+
+**Blank page even when using layouts**
+---
+
+> generally caused by the lack of the `_data` folder and its files
+> also, the contact layout does not have a pre-defined contact form, take a look at `contact.md` for an example
+
+```
+.
+├── _data
+│   ├── general.json
+│   ├── home.json
+│   ├── links.json
+│   ├── resume.json
 ```
 
 ---
