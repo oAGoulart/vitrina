@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
-## [0.2.8] - 2020-06-2
+## [0.3.0] - 2020-09-04
+
+### Changed
+
+- Bulma version to 0.9.0
+
+### Fixed
+
+- Buttons "without" link going to home page
+
+## [0.2.8] - 2020-06-02
 
 ### Added
 
@@ -61,7 +71,8 @@ All notable changes to this project will be documented in this file.
 - Unnecessary files from Jekyll build/serve
 
 
-[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.2.8...HEAD
+[unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.3.0...HEAD
+[0.3.0]: https://github.com/oAGoulart/vitrina/releases/tag/v0.3.0
 [0.2.8]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.8
 [0.2.6]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.6
 [0.2.5]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.5
