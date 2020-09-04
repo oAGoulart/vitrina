@@ -1,6 +1,6 @@
 {
   "name": "vitrina",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "description": "A general purpose, configurable, Jekyll theme",
   "main": "index.html",
   "author": {
@@ -26,7 +26,7 @@
     "build": "bundle exec jekyll build"
   },
   "dependencies": {
-    "bulma": "^0.8.2",
+    "bulma": "^0.9.0",
     "fork-awesome": "^1.1.7"
   }
 }
