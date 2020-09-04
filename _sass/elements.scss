@@ -123,7 +123,7 @@ ul:not(.task-list) {
   &.is-primary:active,
   &.is-primary.is-active,
   &.is-primary:focus,
-  &.is-primary.is-focused, {
+  &.is-primary.is-focused {
     background-color: $primary-invert;
     color: $primary;
   }

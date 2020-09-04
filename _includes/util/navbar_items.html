@@ -3,9 +3,15 @@
     <div class="buttons">
 
     {% for button in item.content %}
-      {% assign link = button.link %}
-      {% include util/prepend_link.html %}
-      <a class="button {{ button.style }}" href="{{ link }}">
+      {% if button.link %}
+        {% assign link = button.link %}
+        {% include util/prepend_link.html %}
+        <a class="button {{ button.style }}" href="{{ link }}">
+      
+      {% else %}
+        <a class="button {{ button.style }}">
+
+      {% endif %}
 
       {% if button.icon %}
         <span class="icon {{ button.icon.style }}">
