@@ -72,7 +72,7 @@ All notable changes to this project will be documented in this file.
 
 
 [unreleased]: https://github.com/oAGoulart/vitrina/compare/v0.3.0...HEAD
-[0.2.8]: https://github.com/oAGoulart/vitrina/releases/tag/v0.3.0
+[0.3.0]: https://github.com/oAGoulart/vitrina/releases/tag/v0.3.0
 [0.2.8]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.8
 [0.2.6]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.6
 [0.2.5]: https://github.com/oAGoulart/vitrina/releases/tag/v0.2.5
