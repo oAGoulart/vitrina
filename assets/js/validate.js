@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 function toggleSuccessDanger(element, success) {
   if (success) {

@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.files = `git ls-files`.split("\n")
 
   s.platform = Gem::Platform::RUBY
+  s.required_ruby_version = '>= 2.5'
   s.add_runtime_dependency 'github-pages'
 
   s.add_development_dependency 'html-proofer', '~>3.15'
