@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var toggleNavbar = function() {
   $(".navbar-burger").click(function() {
