@@ -1,8 +1,6 @@
 language: ruby
 before_script:
   - bundle install
-  - gem install percy-cli
 script:
   - sudo chmod +x ./scripts/build.sh
   - ./scripts/build.sh
-  - percy snapshot _site/
