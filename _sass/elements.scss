@@ -90,6 +90,18 @@ main {
   }
 
   .projects {
+    figure {
+      .overlay {
+        background-color: $primary;
+        bottom: 1rem;
+        color: $white;
+        padding: 0 1rem 0 0.4rem;
+        position: absolute;
+        right: -0.5rem;
+        z-index: 1000;
+      }
+    }
+
     .columns {
       padding: 1rem;
     }
@@ -99,11 +111,11 @@ main {
     padding-bottom: 5rem;
   }
 
-  & > .section:nth-child(even) {
+  &>.section:nth-child(even) {
     background-color: $white;
   }
 
-  & > .section:nth-child(odd) {
+  &>.section:nth-child(odd) {
     background-color: $grey-lighter;
   }
 }

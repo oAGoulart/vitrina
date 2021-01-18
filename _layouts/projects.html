@@ -37,6 +37,11 @@ layout: default
 
             <img src="{{ link }}" alt="{{ project.title }}">
           </a>
+
+        {% if project.overlay %}
+          <span class="overlay {{ project.overlay.style }}">{{ project.overlay.text }}</span>
+        {% endif %}
+
         </figure>
       </div>
 
